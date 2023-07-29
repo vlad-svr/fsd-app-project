@@ -1,0 +1,17 @@
+# production
+build
+
+# Dependency directory
+node_modules
+
+# Common IDE working directories
+.idea
+
+# misc
+.DS_Store
+
+# ENVs
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

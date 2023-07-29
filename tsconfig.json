@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+//        "baseUrl": ".",
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": false,
+        "moduleResolution": "node",
+        // esModuleInterop allows us working with packages which use common js like we use regular packages with import require() module.export
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "build"
+    ],
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    }
+}

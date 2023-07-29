@@ -1,8 +1,8 @@
 # production
-build
+/build
 
 # Dependency directory
-node_modules
+/node_modules
 
 # Common IDE working directories
 .idea

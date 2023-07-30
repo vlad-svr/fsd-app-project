@@ -7,9 +7,9 @@ export default function classNames(
 ): string {
   return [
     cls,
-    ...additional,
+    ...additional.filter(Boolean),
     ...Object.entries(mods)
-      .filter(Boolean)
+      .filter(([_, value]) => Boolean(value))
       .map(([className]) => className),
   ].join(' ');
 }

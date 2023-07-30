@@ -10,7 +10,6 @@ interface NavBarProps {
 function NavBar({className}: NavBarProps) {
   return (
     <div className={cn(cls.navbar, {}, [className])}>
-      <ThemeSwitcher />
       <div className={cn(cls.links)}>
         <AppLink to="/" theme={AppLinkTheme.SECONDARY}>
           Main page

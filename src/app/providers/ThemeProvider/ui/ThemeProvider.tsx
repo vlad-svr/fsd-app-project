@@ -3,7 +3,7 @@ import {
   Theme,
   ThemeContext,
   ThemeContextProps,
-} from './ThemeContext';
+} from '../lib/ThemeContext';
 import {Context, FC, JSX, PropsWithChildren, ReactNode, useMemo, useState} from 'react';
 
 const defaultTheme =

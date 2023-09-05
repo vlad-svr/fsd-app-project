@@ -18,7 +18,9 @@ function Sidebar ({ className }: SidebarProps) {
   }
 
   return (
-      <div className={classNames(cls.wrapper, { [cls.collapsed]: collapsed }, [className])}>
+      <div
+          className={classNames(cls.wrapper, { [cls.collapsed]: collapsed }, [className])}
+      >
           <button onClick={onToggle}>{t('toggle')}</button>
           <div className={classNames(cls.switchers)}>
               <ThemeSwitcher />

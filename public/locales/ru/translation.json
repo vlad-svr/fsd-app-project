@@ -1,6 +1,7 @@
 {
   "main_page": "Главная страница",
   "toggle": "Переключить",
-  "language": "English",
-  "page_not_found": "The page is not found"
+  "language": "Русский",
+  "page_not_found": "Страница не найдена",
+  "something_went_wrong": "Что-то пошло не так",
 }

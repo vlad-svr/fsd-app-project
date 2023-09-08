@@ -1,5 +1,6 @@
 {
   "main_page": "Главная страница",
   "toggle": "Переключить",
-  "language": "English"
+  "language": "English",
+  "page_not_found": "The page is not found"
 }

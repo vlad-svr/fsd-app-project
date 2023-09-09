@@ -14,7 +14,7 @@ const LANGUAGE_CODES = {
 function LanguageSwitcher ({ className }: LanguageSwitcherProps) {
   const { t, i18n } = useTranslation()
 
-  const toggle = (): void => {
+  const toggle = () => {
     void i18n.changeLanguage(
       i18n.language === LANGUAGE_CODES.russian
         ? LANGUAGE_CODES.english

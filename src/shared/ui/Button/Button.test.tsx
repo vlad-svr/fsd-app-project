@@ -8,9 +8,9 @@ describe(
       expect(screen.getByText('TEST')).toBeInTheDocument()
     })
 
-    test('check if the button has pure theme', () => {
+    test('check if the button has the pure theme', () => {
       render(<Button theme={ButtonTheme.PURE}>TEST</Button>)
-      expect(screen.getByText('TEST')).toHaveClass('clear')
+      expect(screen.getByText('TEST')).toHaveClass('pure')
     })
   }
 )

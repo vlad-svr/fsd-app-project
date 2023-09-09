@@ -5,6 +5,7 @@
 * [Babel](https://babeljs.io/)
 * [Storybook](https://storybook.js.org/)
 * [Jest](https://jestjs.io/)
+* [Loki](https://github.com/oblador/loki)  -  Visual Regression Testing for Storybook
 * [i18next](https://www.i18next.com/)
 * [ESLint](https://eslint.org/)
 * [Stylelint](https://stylelint.io/)

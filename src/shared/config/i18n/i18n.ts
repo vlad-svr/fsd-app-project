@@ -11,6 +11,7 @@ void i18n
   .init({
     fallbackLng: 'en',
     debug: _IS_DEV_,
+    defaultNS: 'translation',
     load: 'languageOnly',
     interpolation: {
       escapeValue: false

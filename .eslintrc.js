@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:jest-dom/recommended'],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:jest-dom/recommended', 'plugin:storybook/recommended'],
   overrides: [
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
@@ -14,11 +14,12 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'i18next', 'jest-dom'],
+  plugins: ['react', 'i18next', 'jest-dom', 'eslint-plugin-storybook'],
   rules: {
     'react/jsx-indent': [2, 4],
     'react/jsx-indent-props': [2, 4],
     'react/react-in-jsx-scope': 'off',
+    'react/display-name': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

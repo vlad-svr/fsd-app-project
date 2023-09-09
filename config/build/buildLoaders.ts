@@ -1,6 +1,7 @@
 import { type RuleSetRule } from 'webpack'
 import { type BuildOptions } from './types/config'
 import { buildCssLoader } from './loaders/buildCssLoader'
+import { buildSvgLoader } from './loaders/buildSvgLoader'
 
 export function buildLoaders ({ isDev }: BuildOptions): RuleSetRule[] {
   // if we don't use the typescript then we need the babel-loader
@@ -10,10 +11,7 @@ export function buildLoaders ({ isDev }: BuildOptions): RuleSetRule[] {
     exclude: /node_modules/
   }
 
-  const svgLoader = {
-    test: /\.svg$/i,
-    use: ['@svgr/webpack']
-  }
+  const svgLoader = buildSvgLoader()
 
   const babelLoader = {
     test: /\.(js|jsx|tsx)$/,

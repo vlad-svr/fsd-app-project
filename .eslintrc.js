@@ -26,5 +26,10 @@ module.exports = {
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' }],
     'react/jsx-props-no-spreading': 'warn'
+  },
+  "settings": {
+    "react": {
+      "version": "detect",
+    },
   }
 }

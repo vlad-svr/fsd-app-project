@@ -1,5 +1,6 @@
 # production
 /build
+/storybook-static
 
 # Dependency directory
 /node_modules

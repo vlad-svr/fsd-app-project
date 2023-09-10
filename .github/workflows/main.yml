@@ -50,4 +50,4 @@ jobs:
         run: npm run storybook:build
 
       - name: Screenshot testing
-        run: npm run test:ui:ci
+        run: npm run test:ui:ci:tempfix

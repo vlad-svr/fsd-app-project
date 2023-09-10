@@ -10,8 +10,11 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
-    "test:ui:ci:tempfix": "concurrently --kill-others --raw --success first \"npm run storybook\" \"npx loki test\" \"delay\"",
+    "test:ui:ci:tempfix": "concurrently -s first -k \"npm run storybook\" \"npm run test:ui\"",
     "test:ui:ok": "npx loki approve",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
+    "test:ui:json": "node scripts/generate-visual-json-report.js",
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "lint:css": "npx stylelint \"**/*.scss\"",
@@ -67,6 +70,7 @@
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.0.0",
     "react-refresh": "^0.14.0",
+    "reg-cli": "^0.17.7",
     "sass": "^1.64.1",
     "sass-loader": "^13.3.2",
     "storybook": "^7.4.0",
@@ -79,8 +83,7 @@
     "webpack": "^5.76.0",
     "webpack-bundle-analyzer": "^4.9.1",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.15.1",
-    "delay": "^6.0.0"
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "i18next": "^23.4.6",

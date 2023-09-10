@@ -1,6 +1,8 @@
 # production
 /build
 /storybook-static
+.loki/report.json
+.loki/report.html
 
 # Dependency directory
 /node_modules

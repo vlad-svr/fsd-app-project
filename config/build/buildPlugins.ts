@@ -21,6 +21,6 @@ export function buildPlugins ({
     }),
     isDev && new ReactRefreshWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({ openAnalyzer: false })
+    isDev && new BundleAnalyzerPlugin({ openAnalyzer: false })
   ].filter(Boolean)
 }

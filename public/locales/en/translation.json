@@ -5,5 +5,6 @@
   "page_not_found": "The page is not found",
   "something_went_wrong": "Something went wrong",
   "reload_page": "Reload page",
-  "unexpected_error_happened": "Unexpected error happened"
+  "unexpected_error_happened": "Unexpected error happened",
+  "short_lang": "En"
 }

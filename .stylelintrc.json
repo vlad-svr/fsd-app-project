@@ -1,4 +1,7 @@
 {
   "extends": "stylelint-config-standard-scss",
-  "indentation": [4]
+  "indentation": [4],
+  "rules": {
+    "selector-class-pattern": "^([a-z][a-z0-9]*)(_[a-z0-9]+)*$"
+  }
 }

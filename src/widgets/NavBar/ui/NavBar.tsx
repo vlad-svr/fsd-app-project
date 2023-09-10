@@ -13,12 +13,7 @@ function NavBar ({ className }: NavBarProps) {
   return (
       <div className={cn(cls.navbar, {}, [className])}>
           <div className={cn(cls.links)}>
-              <AppLink to="/" theme={AppLinkTheme.SECONDARY}>
-                  {t('main_page')}
-              </AppLink>
-              <AppLink to="/about" theme={AppLinkTheme.SECONDARY}>
-                  {t('about_us')}
-              </AppLink>
+
           </div>
       </div>
 

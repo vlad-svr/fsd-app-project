@@ -3,6 +3,7 @@ import cn from 'shared/lib/classNames/classNames'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 
 interface LanguageSwitcherProps {
+  short?: boolean
   className?: string
 }
 
@@ -11,7 +12,7 @@ const LANGUAGE_CODES = {
   russian: 'ru'
 }
 
-function LanguageSwitcher ({ className }: LanguageSwitcherProps) {
+function LanguageSwitcher ({ short, className }: LanguageSwitcherProps) {
   const { t, i18n } = useTranslation()
 
   const toggle = () => {
@@ -28,7 +29,7 @@ function LanguageSwitcher ({ className }: LanguageSwitcherProps) {
           onClick={toggle}
           className={cn('', {}, [className])}
     >
-          {t('language')}
+          {t(short ? 'short_lang' : 'language')}
       </Button>
   )
 }

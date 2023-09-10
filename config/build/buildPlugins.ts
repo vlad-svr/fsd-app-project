@@ -20,7 +20,7 @@ export function buildPlugins ({
       _IS_DEV_: JSON.stringify(isDev)
     }),
     isDev && new ReactRefreshWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
+    isDev && new webpack.HotModuleReplacementPlugin(),
     isDev && new BundleAnalyzerPlugin({ openAnalyzer: false })
   ].filter(Boolean)
 }

@@ -6,7 +6,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 
 const meta = {
   title: 'Widget/NavBar',
-  component: NavBar,
+  component: NavBar
 } satisfies Meta<typeof NavBar>
 
 export default meta

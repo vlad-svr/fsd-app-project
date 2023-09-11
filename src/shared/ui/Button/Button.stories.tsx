@@ -20,10 +20,17 @@ export const Primary: Story = {
   }
 }
 
-export const Clear: Story = {
+export const Pure: Story = {
   args: {
     children: 'Text',
     theme: ButtonTheme.PURE
+  }
+}
+
+export const PureInverted: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.PURE_INVERTED
   }
 }
 

@@ -3,18 +3,34 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:jest-dom/recommended', 'plugin:storybook/recommended'],
+  extends: [
+      'plugin:react/recommended',
+      'standard-with-typescript',
+      'plugin:i18next/recommended',
+      'plugin:jest-dom/recommended',
+      'plugin:storybook/recommended',
+      'plugin:react-hooks/recommended'
+  ],
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
-      rules: { 'i18next/no-literal-string': 'off' }
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+      rules: {
+          'i18next/no-literal-string': 'off',
+          'max-len': 'off'
+      }
     }
   ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'i18next', 'jest-dom', 'eslint-plugin-storybook'],
+  plugins: [
+      'react',
+      'i18next',
+      'jest-dom',
+      'react-hooks',
+      'eslint-plugin-storybook'
+  ],
   rules: {
     'react/jsx-indent': [2, 4],
     'react/jsx-indent-props': [2, 4],
@@ -25,7 +41,9 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' }],
-    'react/jsx-props-no-spreading': 'warn'
+    'react/jsx-props-no-spreading': 'warn',
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   "settings": {
     "react": {

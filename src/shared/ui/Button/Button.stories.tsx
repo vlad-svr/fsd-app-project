@@ -6,9 +6,7 @@ import { Theme } from 'app/providers/ThemeProvider'
 
 const meta = {
   title: 'Shared/Button',
-  component: Button,
-  argTypes: {
-  }
+  component: Button
 } satisfies Meta<typeof Button>
 
 export default meta
@@ -103,4 +101,12 @@ export const OutlineDark: Story = {
     theme: ButtonTheme.OUTLINE
   },
   decorators: [ThemeDecorator(Theme.DARK)]
+}
+
+export const Disabled: Story = {
+  args: {
+    children: 'Text',
+    theme: ButtonTheme.OUTLINE,
+    disabled: true
+  }
 }

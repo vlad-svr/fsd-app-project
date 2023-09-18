@@ -14,11 +14,14 @@
   "increment": "",
   "language": "",
   "login": "",
+  "login_form": "",
+  "logout": "",
   "main_page": "",
   "page_not_found": "",
   "reload_page": "",
   "take_a_shower": "",
   "toggle": "",
   "unexpected_error_happened": "",
-  "value": ""
+  "value": "",
+  "wrong_auth_data": ""
 }

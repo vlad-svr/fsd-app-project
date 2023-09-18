@@ -8,6 +8,9 @@
   "unexpected_error_happened": "Unexpected error happened",
   "short_lang": "En",
   "login": "Login",
+  "logout": "Logout",
   "enter_username": "Enter username",
-  "enter_password": "Enter password"
+  "enter_password": "Enter password",
+  "login_form": "Login form",
+  "wrong_auth_data": "The login or password is wrong"
 }

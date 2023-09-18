@@ -1,4 +1,4 @@
-import type webpack from 'webpack'
+import webpack from 'webpack'
 import path from 'path'
 import { type BuildPaths } from '../build/types/config'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
@@ -19,6 +19,10 @@ async function webpackFinal (config: webpack.Configuration) {
 
       return rule
     })
+
+    config.plugins.push(new webpack.DefinePlugin({
+      _IS_DEV_: true
+    }))
 
     config.module.rules.push(buildSvgLoader(), buildCssLoader(true))
   }

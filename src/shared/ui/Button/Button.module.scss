@@ -4,6 +4,11 @@
   padding: 10px 15px;
 }
 
+.disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
 .pure,
 .pure_inverted {
   padding: 0;

@@ -1,4 +1,3 @@
-import cls from './LoginModal.module.scss'
 import classNames from 'shared/lib/classNames/classNames'
 import { Modal } from 'shared/ui/Modal/Modal'
 import { LoginForm } from 'features/AuthByUsername/ui/LoginForm/LoginForm'
@@ -14,7 +13,7 @@ function LoginModal ({ isOpen, onClose, className }: LoginModalProps) {
       <Modal
           isOpen={isOpen}
           onClose={onClose}
-          className={classNames(cls.wrapper, {}, [className])}
+          className={classNames(undefined, {}, [className])}
           lazy
       >
           <LoginForm/>

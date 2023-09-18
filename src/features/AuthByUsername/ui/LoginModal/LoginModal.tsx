@@ -13,7 +13,7 @@ function LoginModal ({ isOpen, onClose, className }: LoginModalProps) {
       <Modal
           isOpen={isOpen}
           onClose={onClose}
-          className={classNames(undefined, {}, [className])}
+          className={classNames('', {}, [className])}
           lazy
       >
           <LoginForm/>

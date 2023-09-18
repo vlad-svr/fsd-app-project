@@ -5,5 +5,7 @@
   "page_not_found": "Страница не найдена",
   "something_went_wrong": "Что-то пошло не так",
   "short_lang": "Ру",
-  "login": "Войти"
+  "login": "Войти",
+  "enter_username": "Введите username",
+  "enter_password": "Введите пароль"
 }

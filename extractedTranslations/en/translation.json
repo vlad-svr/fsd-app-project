@@ -1,4 +1,6 @@
 {
+  "": "",
+  "Login": "",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam": {
       "": ""
@@ -7,6 +9,8 @@
   "Throw Error": "",
   "about_us": "",
   "decrement": "",
+  "enter_password": "",
+  "enter_username": "",
   "increment": "",
   "language": "",
   "login": "",

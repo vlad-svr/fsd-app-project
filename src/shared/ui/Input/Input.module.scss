@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.placeholder {
+    margin-right: 5px;
+}
+
+.input {
+    padding: 3px 5px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    text-shadow: 0 0 0 var(--primary-color);
+}

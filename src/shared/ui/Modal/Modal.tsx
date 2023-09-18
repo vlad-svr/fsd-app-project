@@ -8,13 +8,15 @@ const ANIMATION_DELAY_MS = 200
 interface ModalProps {
   className?: string
   children?: ReactNode
+  lazy?: boolean
   isOpen?: boolean
   onClose?: () => void
 }
 
 function Modal (props: ModalProps) {
-  const { className, children, isOpen, onClose } = props
+  const { className, children, isOpen, onClose, lazy } = props
   const [isClosing, setIsClosing] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
   const mods: Record<string, boolean> = {
@@ -49,8 +51,16 @@ function Modal (props: ModalProps) {
     }
   }, [isOpen, onKeyDown])
 
+  React.useEffect(() => {
+    setIsMounted(isOpen)
+  }, [isOpen])
+
   const onContentClick = (e: MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
+  }
+
+  if (lazy && !isMounted) {
+    return null
   }
 
   return (

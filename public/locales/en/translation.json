@@ -7,5 +7,7 @@
   "reload_page": "Reload page",
   "unexpected_error_happened": "Unexpected error happened",
   "short_lang": "En",
-  "login": "Login"
+  "login": "Login",
+  "enter_username": "Enter username",
+  "enter_password": "Enter password"
 }

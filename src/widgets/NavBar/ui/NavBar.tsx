@@ -27,7 +27,7 @@ function NavBar ({ className }: NavBarProps) {
               {t('login')}
           </Button>
           <Modal isOpen={isAuthModalOpen} onClose={onToggleModal}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.
+              {t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.')}
           </Modal>
       </div>
 

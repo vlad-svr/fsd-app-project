@@ -2,8 +2,7 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type User, type UserSchema } from 'entities/User'
 import { USER_LOCALSTORAGE_KEY } from 'shared/constants/localStorage'
 
-const initialState: UserSchema = {
-}
+const initialState: UserSchema = {}
 
 export const userSlice = createSlice({
   name: 'user',

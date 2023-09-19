@@ -45,7 +45,7 @@ function NavBar ({ className }: NavBarProps) {
           >
               {t('login')}
           </Button>
-          <LoginModal isOpen={isAuthModalOpen} onClose={closeModal} />
+          {isAuthModalOpen && <LoginModal isOpen={isAuthModalOpen} onClose={closeModal} /> }
       </div>
   )
 }

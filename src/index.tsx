@@ -8,16 +8,21 @@ import { StoreProvider } from 'app/providers/StoreProvider'
 import { ErrorBoundary } from 'app/providers/ErrorBoundary'
 
 const container = document?.getElementById('root')
+
+if (!container) {
+  throw new Error('The element is not found by the passed id')
+}
+
 const root = createRoot(container)
 
 root.render(
-    <StoreProvider>
-        <BrowserRouter>
+    <BrowserRouter>
+        <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>
                     <App />
                 </ThemeProvider>
             </ErrorBoundary>
-        </BrowserRouter>
-    </StoreProvider>
+        </StoreProvider>
+    </BrowserRouter>
 )

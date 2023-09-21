@@ -10,6 +10,7 @@
   "Throw Error": "",
   "about_us": "",
   "decrement": "",
+  "edit": "",
   "enter_password": "",
   "enter_username": "",
   "increment": "",
@@ -19,10 +20,14 @@
   "logout": "",
   "main_page": "",
   "page_not_found": "",
+  "profile": "",
   "reload_page": "",
   "take_a_shower": "",
   "toggle": "",
   "unexpected_error_happened": "",
   "value": "",
-  "wrong_auth_data": ""
+  "wrong_auth_data": "",
+  "your_name": "",
+  "your_surname": "",
+  "Профиль": ""
 }

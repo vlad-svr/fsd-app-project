@@ -12,7 +12,7 @@ describe('counterSlice', () => {
   })
 
   test('passing empty state and checking default state', () => {
-    const state: CounterSchema = undefined
+    const state = undefined
     expect(counterReducer(state, counterActions.increment())).toEqual({ value: 1 })
   })
 })

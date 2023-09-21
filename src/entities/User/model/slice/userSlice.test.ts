@@ -1,4 +1,3 @@
-import { type DeepPartial } from '@reduxjs/toolkit'
 import { userActions, userReducer, type UserSchema } from 'entities/User'
 
 const mockGetItem = jest.fn()

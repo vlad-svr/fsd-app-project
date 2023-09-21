@@ -7,7 +7,8 @@ import type { Config } from 'jest'
 
 const config: Config = {
   globals: {
-    _IS_DEV_: true
+    _IS_DEV_: true,
+    _API_BASE_URL_: ''
   },
   clearMocks: true,
   testEnvironment: 'jsdom',

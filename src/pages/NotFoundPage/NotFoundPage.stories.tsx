@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider'
 
 const meta = {
-  title: 'Page/NotFoundPage',
+  title: 'Pages/NotFoundPage',
   component: NotFoundPage
 } satisfies Meta<typeof NotFoundPage>
 

@@ -19,7 +19,7 @@ function LoginModal ({ isOpen, onClose, className }: LoginModalProps) {
           lazy
       >
           <Suspense fallback={<Loader/>}>
-              <LoginFormAsync/>
+              <LoginFormAsync onSuccess={onClose}/>
           </Suspense>
       </Modal>
   )

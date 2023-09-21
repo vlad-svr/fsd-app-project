@@ -1,26 +1,28 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { memo, useMemo, useState } from 'react'
 import cls from './Sidebar.module.scss'
 import classNames from 'shared/lib/classNames/classNames'
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
-import { RoutePaths } from 'shared/config/routeConfig/routeConfig'
-import AboutIcon from 'shared/assets/icons/about-20-20.svg'
-import MainIcon from 'shared/assets/icons/main-20-20.svg'
+import { SidebarItem } from '../SidebarItem/SidebarItem'
+import { SidebarItemsList } from '../../model/items'
 
 interface SidebarProps {
   className?: string
 }
 
-function Sidebar ({ className }: SidebarProps) {
-  const { t } = useTranslation()
+const Sidebar = memo(({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false)
 
   const onToggle = (): void => {
     setCollapsed(prevState => !prevState)
   }
+
+  const itemList = useMemo(() => {
+    return SidebarItemsList.map(item => (
+        <SidebarItem key={item.path} item={item} collapsed={collapsed}/>
+    ))
+  }, [collapsed])
 
   return (
       <div
@@ -38,14 +40,7 @@ function Sidebar ({ className }: SidebarProps) {
               {collapsed ? '>' : '<'}
           </Button>
           <div className={cls.navbar}>
-              <AppLink to={RoutePaths.main} theme={AppLinkTheme.SECONDARY} className={cls.navbar_item}>
-                  <MainIcon className={cls.icon}/>
-                  <span className={cls.link}>{t('main_page')}</span>
-              </AppLink>
-              <AppLink to={RoutePaths.about} theme={AppLinkTheme.SECONDARY} className={cls.navbar_item}>
-                  <AboutIcon className={cls.icon}/>
-                  <span className={cls.link}>{t('about_us')}</span>
-              </AppLink>
+              {itemList}
           </div>
           <div className={classNames(cls.switchers)}>
               <ThemeSwitcher />
@@ -53,6 +48,6 @@ function Sidebar ({ className }: SidebarProps) {
           </div>
       </div>
   )
-}
+})
 
 export { Sidebar }

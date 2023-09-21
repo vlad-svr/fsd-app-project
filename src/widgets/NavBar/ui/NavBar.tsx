@@ -1,17 +1,18 @@
 import { useTranslation } from 'react-i18next'
 import cls from './NavBar.module.scss'
 import cn from 'shared/lib/classNames/classNames'
-import { useModalControl } from 'shared/hooks'
+import { useModalControl } from 'shared/lib/hooks'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserAuthData, userActions } from 'entities/User'
+import { memo } from 'react'
 
 interface NavBarProps {
   className?: string
 }
 
-function NavBar ({ className }: NavBarProps) {
+const NavBar = memo(({ className }: NavBarProps) => {
   const { t } = useTranslation()
   const authData = useSelector(getUserAuthData)
   const dispatch = useDispatch()
@@ -48,6 +49,6 @@ function NavBar ({ className }: NavBarProps) {
           {isAuthModalOpen && <LoginModal isOpen={isAuthModalOpen} onClose={closeModal} /> }
       </div>
   )
-}
+})
 
 export { NavBar }

@@ -5,7 +5,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider'
 
 const meta = {
-  title: 'Page/MainPage',
+  title: 'Pages/MainPage',
   component: MainPage
 } satisfies Meta<typeof MainPage>
 

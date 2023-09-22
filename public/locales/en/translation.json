@@ -14,5 +14,7 @@
   "enter_username": "Enter username",
   "enter_password": "Enter password",
   "login_form": "Login form",
-  "wrong_auth_data": "The login or password is wrong"
+  "wrong_auth_data": "The login or password is wrong",
+  "select_currency": "Select currency",
+  "select_country": "Select country"
 }

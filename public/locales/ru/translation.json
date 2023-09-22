@@ -12,5 +12,7 @@
   "enter_username": "Введите username",
   "enter_password": "Введите пароль",
   "login_form": "Форма авторизации",
-  "wrong_auth_data": "Пароль или логин неверный"
+  "wrong_auth_data": "Пароль или логин неверный",
+  "select_currency": "Выберите валюту",
+  "select_country": "Выберите страну"
 }

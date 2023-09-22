@@ -1,6 +1,14 @@
 {
   "edit": "Edit",
+  "save": "Save",
+  "cancel": "Cancel",
   "profile": "Profile",
   "your_name": "Your name",
-  "your_surname": "Your surname"
+  "your_age": "Your age",
+  "city": "City",
+  "your_surname": "Your surname",
+  "enter_username": "Enter your username",
+  "put_avatar_link": "Put a avatar link",
+  "loading_profile_error": "An error occurred when loading a profile",
+  "try_to_reload_page": "Please try reloading the page"
 }

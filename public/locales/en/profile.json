@@ -10,5 +10,12 @@
   "enter_username": "Enter your username",
   "put_avatar_link": "Put a avatar link",
   "loading_profile_error": "An error occurred when loading a profile",
-  "try_to_reload_page": "Please try reloading the page"
+  "try_to_reload_page": "Please try reloading the page",
+  "validation_errors": {
+    "incorrect_country": "Incorrect country",
+    "incorrect_user_data": "Incorrect user data",
+    "incorrect_age": "Incorrect age",
+    "server_error": "Server error",
+    "no_data": "Data is missing"
+  }
 }

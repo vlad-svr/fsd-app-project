@@ -35,6 +35,13 @@
   "toggle": "",
   "try_to_reload_page": "",
   "unexpected_error_happened": "",
+  "validation_errors": {
+    "incorrect_age": "",
+    "incorrect_country": "",
+    "incorrect_user_data": "",
+    "no_data": "",
+    "server_error": ""
+  },
   "value": "",
   "wrong_auth_data": "",
   "your_age": "",

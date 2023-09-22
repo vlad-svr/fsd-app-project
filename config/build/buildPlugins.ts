@@ -8,7 +8,8 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 export function buildPlugins ({
   paths,
   isDev,
-  apiURL
+  apiURL,
+  project
 }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
     new HTMLWebpackPlugin({ template: paths.html }),
@@ -19,7 +20,8 @@ export function buildPlugins ({
     }),
     new webpack.DefinePlugin({
       _IS_DEV_: JSON.stringify(isDev),
-      _API_BASE_URL_: JSON.stringify(apiURL)
+      _API_BASE_URL_: JSON.stringify(apiURL),
+      _PROJECT_: JSON.stringify(project)
     }),
     isDev && new ReactRefreshWebpackPlugin(),
     isDev && new webpack.HotModuleReplacementPlugin(),

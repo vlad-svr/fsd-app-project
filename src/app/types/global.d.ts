@@ -26,6 +26,7 @@ declare module '*.json' {
 
 declare const _IS_DEV_: boolean
 declare const _API_BASE_URL_: string
+declare const _PROJECT_: 'storybook' | 'production' | 'jest'
 
 type DeepPartial<T> = T extends object ? {
   [P in keyof T]?: DeepPartial<T[P]>;

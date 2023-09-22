@@ -78,6 +78,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
               )}
               <Input
                   value={data?.first}
+                  label={t('your_name')}
                   placeholder={t('your_name')}
                   className={cls.input}
                   onChange={onChangeFirstname}
@@ -85,6 +86,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 />
               <Input
                   value={data?.lastname}
+                  label={t('your_surname')}
                   placeholder={t('your_surname')}
                   className={cls.input}
                   onChange={onChangeLastname}
@@ -92,6 +94,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 />
               <Input
                   value={data?.age}
+                  label={t('your_age')}
                   placeholder={t('your_age')}
                   className={cls.input}
                   onChange={onChangeAge}
@@ -102,6 +105,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
               />
               <Input
                   value={data?.city}
+                  label={t('city')}
                   placeholder={t('city')}
                   className={cls.input}
                   onChange={onChangeCity}
@@ -109,6 +113,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
               />
               <Input
                   value={data?.username}
+                  label={t('enter_username')}
                   placeholder={t('enter_username')}
                   className={cls.input}
                   onChange={onChangeUsername}
@@ -116,6 +121,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
               />
               <Input
                   value={data?.avatar}
+                  label={t('put_avatar_link')}
                   placeholder={t('put_avatar_link')}
                   className={cls.input}
                   onChange={onChangeAvatar}

@@ -22,7 +22,8 @@ async function webpackFinal (config: webpack.Configuration) {
 
       config.plugins?.push(new webpack.DefinePlugin({
         _IS_DEV_: JSON.stringify(true),
-        _API_BASE_URL_: JSON.stringify('user')
+        _API_BASE_URL_: JSON.stringify('user'),
+        _PROJECT_: JSON.stringify('storybook')
       }))
 
       config.module?.rules?.push(buildSvgLoader(), buildCssLoader(true))

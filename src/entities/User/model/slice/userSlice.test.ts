@@ -26,7 +26,7 @@ describe('userSlice', () => {
     const state: DeepPartial<UserSchema> = { }
     localStorage.getItem = () => JSON.stringify(newUserData)
 
-    expect(userReducer(state as UserSchema, userActions.initAuthData())).toEqual({ authData: newUserData })
+    expect(userReducer(state as UserSchema, userActions.initAuthData())).toEqual({ authData: newUserData, _initialized: true })
   })
 
   test('should logout', () => {

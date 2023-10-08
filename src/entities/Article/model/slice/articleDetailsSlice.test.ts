@@ -1,16 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react'
-
-import { type Article, ArticleDetails } from 'entities/Article'
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
-
-const meta = {
-  title: 'Entities/ArticleDetails',
-  component: ArticleDetails
-} satisfies Meta<typeof ArticleDetails>
-
-export default meta
-type Story = StoryObj<typeof meta>
+import { type ArticleDetailsSchema } from '../types/articleDetailsSchema'
+import { type Article, ArticleBlockType, ArticleType } from '../types/article'
+import { articleDetailsReducer } from './articleDetailsSlice'
+import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById'
 
 const article: Article = {
   id: '1',
@@ -48,35 +39,31 @@ const article: Article = {
   ]
 }
 
-export const Normal: Story = {
-  args: {
-    id: '1'
-  },
-  decorators: [StoreDecorator({
-    articleDetails: {
-      data: article
+describe('articleDetailsSlice', () => {
+  test('test fetchArticleById service pending', () => {
+    const state: DeepPartial<ArticleDetailsSchema> = {
+      isLoading: false
     }
-  })]
-}
 
-export const Loading: Story = {
-  args: {
-    id: '1'
-  },
-  decorators: [StoreDecorator({
-    articleDetails: {
+    expect(articleDetailsReducer(
+      state as ArticleDetailsSchema,
+      fetchArticleById.pending
+    )).toEqual({
+      isLoading: true
+    })
+  })
+
+  test('test fetchArticleById service fulfilled', () => {
+    const state: DeepPartial<ArticleDetailsSchema> = {
       isLoading: true
     }
-  })]
-}
 
-export const Error: Story = {
-  args: {
-    id: '1'
-  },
-  decorators: [StoreDecorator({
-    articleDetails: {
-      error: 'error'
-    }
-  })]
-}
+    expect(articleDetailsReducer(
+      state as ArticleDetailsSchema,
+      fetchArticleById.fulfilled(article, '', '')
+    )).toEqual({
+      isLoading: false,
+      data: article
+    })
+  })
+})

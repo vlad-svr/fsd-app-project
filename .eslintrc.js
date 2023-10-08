@@ -36,6 +36,7 @@ module.exports = {
     'react/jsx-indent-props': [2, 4],
     'react/react-in-jsx-scope': 'off',
     'react/display-name': 'off',
+    'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -43,7 +44,6 @@ module.exports = {
     '@typescript-eslint/no-dynamic-delete': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' }],
-    'react/jsx-props-no-spreading': 'warn',
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error"
   },

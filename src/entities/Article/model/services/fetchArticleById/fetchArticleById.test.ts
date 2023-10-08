@@ -1,16 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
-
-import { type Article, ArticleDetails } from 'entities/Article'
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
-
-const meta = {
-  title: 'Entities/ArticleDetails',
-  component: ArticleDetails
-} satisfies Meta<typeof ArticleDetails>
-
-export default meta
-type Story = StoryObj<typeof meta>
+import { type Article, ArticleBlockType, ArticleType } from '../../types/article'
+import { fetchArticleById } from './fetchArticleById'
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk'
 
 const article: Article = {
   id: '1',
@@ -48,35 +38,23 @@ const article: Article = {
   ]
 }
 
-export const Normal: Story = {
-  args: {
-    id: '1'
-  },
-  decorators: [StoreDecorator({
-    articleDetails: {
-      data: article
-    }
-  })]
-}
+describe('fetchArticleById', () => {
+  test('success', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById)
+    thunk.api.get.mockReturnValue(Promise.resolve({ data: article }))
 
-export const Loading: Story = {
-  args: {
-    id: '1'
-  },
-  decorators: [StoreDecorator({
-    articleDetails: {
-      isLoading: true
-    }
-  })]
-}
+    const result = await thunk.callThunk('')
 
-export const Error: Story = {
-  args: {
-    id: '1'
-  },
-  decorators: [StoreDecorator({
-    articleDetails: {
-      error: 'error'
-    }
-  })]
-}
+    expect(thunk.api.get).toHaveBeenCalled()
+    expect(result.meta.requestStatus).toBe('fulfilled')
+    expect(result.payload).toEqual(article)
+  })
+
+  test('error of the fetching data', async () => {
+    const thunk = new TestAsyncThunk(fetchArticleById)
+    thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }))
+    const result = await thunk.callThunk('')
+
+    expect(result.meta.requestStatus).toBe('rejected')
+  })
+})

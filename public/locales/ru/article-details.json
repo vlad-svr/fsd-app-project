@@ -1,3 +1,4 @@
 {
-  "article_not_found": "Статься не найдена"
+  "article_not_found": "Статься не найдена",
+  "article_details_loading_page_error": "Произошла ошибка при загрузке статьи."
 }

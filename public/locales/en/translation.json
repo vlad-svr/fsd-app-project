@@ -17,5 +17,6 @@
   "login_form": "Login form",
   "wrong_auth_data": "The login or password is wrong",
   "select_currency": "Select currency",
-  "select_country": "Select country"
+  "select_country": "Select country",
+  "no_comments": "There are not comments yet"
 }

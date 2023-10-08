@@ -7,6 +7,7 @@ import { type LoginSchema } from 'features/AuthByUsername'
 import { type AnyAction, type CombinedState, type EnhancedStore, type Reducer, type ReducersMapObject } from '@reduxjs/toolkit'
 import { type ProfileSchema } from 'entities/Profile'
 import { type ArticleDetailsSchema } from 'entities/Article'
+import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -16,6 +17,7 @@ export interface StateSchema {
   loginForm?: LoginSchema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
+  articleDetailsComments?: ArticleDetailsCommentsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

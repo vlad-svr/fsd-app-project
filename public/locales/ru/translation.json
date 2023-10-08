@@ -15,5 +15,6 @@
   "login_form": "Форма авторизации",
   "wrong_auth_data": "Пароль или логин неверный",
   "select_currency": "Выберите валюту",
-  "select_country": "Выберите страну"
+  "select_country": "Выберите страну",
+  "no_comments": "Комментарии отсутствуют"
 }

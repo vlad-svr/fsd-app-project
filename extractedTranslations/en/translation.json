@@ -13,6 +13,7 @@
   "article_not_found": "",
   "cancel": "",
   "city": "",
+  "comments": "",
   "decrement": "",
   "edit": "",
   "enter_password": "",
@@ -24,6 +25,7 @@
   "login_form": "",
   "logout": "",
   "main_page": "",
+  "no_comments": "",
   "page_not_found": "",
   "profile": "",
   "put_avatar_link": "",
@@ -52,6 +54,7 @@
   "Введите имя пользователя": "",
   "Введите ссылку на аватар": "",
   "Город": "",
+  "Комментарии отсутствуют": "",
   "Отменить": "",
   "Произошла ошибка при загрузке статьи": {
     "": ""

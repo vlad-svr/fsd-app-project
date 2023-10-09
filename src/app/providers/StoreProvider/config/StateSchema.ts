@@ -8,6 +8,7 @@ import { type AnyAction, type CombinedState, type EnhancedStore, type Reducer, t
 import { type ProfileSchema } from 'entities/Profile'
 import { type ArticleDetailsSchema } from 'entities/Article'
 import { type ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
+import { type AddCommentFormSchema } from 'features/addCommentForm'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -18,6 +19,7 @@ export interface StateSchema {
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsSchema
+  addCommentForm?: AddCommentFormSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

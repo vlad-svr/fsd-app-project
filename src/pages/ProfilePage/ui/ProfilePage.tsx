@@ -1,6 +1,7 @@
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import { useParams } from 'react-router-dom'
 import classNames from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import {
@@ -15,7 +16,7 @@ import {
   profileReducer,
   ValidateProfileError
 } from 'entities/Profile'
-import { useAppDispatch } from 'shared/lib/hooks'
+import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks'
 import { ProfilePageHeader } from 'pages/ProfilePage/ui/ProfilePageHeader/ProfilePageHeader'
 import { type Country } from 'entities/Country'
 import { type Currency } from 'entities/Currency'
@@ -31,6 +32,7 @@ interface ProfilePageProps {
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
   const { t } = useTranslation('profile')
+  const { id } = useParams<{ id: string }>()
   const dispatch = useAppDispatch()
   const formData = useSelector(getProfileForm)
   const isLoading = useSelector(getProfileIsLoading)
@@ -46,11 +48,11 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     [ValidateProfileError.NO_DATA]: t('validation_errors.no_data')
   }
 
-  useEffect(() => {
-    if (_PROJECT_ !== 'storybook') {
-      void dispatch(fetchProfileData())
+  useInitialEffect(() => {
+    if (id) {
+      void dispatch(fetchProfileData(id))
     }
-  }, [dispatch])
+  })
 
   const onChangeFirstname = useCallback((value?: string) => {
     dispatch(profileActions.updateProfile({ first: value || '' }))
@@ -85,7 +87,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   }, [dispatch])
 
   return (
-      <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+      <DynamicModuleLoader reducers={reducers}>
           <div className={classNames('', {}, [className])}>
               <ProfilePageHeader/>
               {validationErrors?.length && validationErrors.map((error) => (

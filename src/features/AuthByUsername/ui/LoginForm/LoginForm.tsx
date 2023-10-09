@@ -48,7 +48,7 @@ const LoginForm = memo(({ onSuccess, className }: LoginFormProps) => {
   }, [dispatch, password, username, onSuccess])
 
   return (
-      <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
+      <DynamicModuleLoader reducers={initialReducers}>
           <div className={classNames(cls.wrapper, {}, [className])}>
               <Text title={t('login_form')} />
               {error && <Text text={t('wrong_auth_data')} theme={TextTheme.ERROR} />}

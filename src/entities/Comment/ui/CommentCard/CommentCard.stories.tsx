@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { CommentCard } from './CommentCard'
 
 const meta = {
-  title: 'Entities/CommentCard',
+  title: 'Entities/Comment/CommentCard',
   component: CommentCard
 } satisfies Meta<typeof CommentCard>
 
@@ -20,8 +20,14 @@ const comment = {
 }
 
 export const Primary: Story = {
-  args:
-        {
-          comment
-        }
+  args: {
+    comment
+  }
+}
+
+export const Loading: Story = {
+  args: {
+    comment,
+    isLoading: true
+  }
 }

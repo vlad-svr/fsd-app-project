@@ -5,14 +5,14 @@ import cls from './ArticlesPage.module.scss'
 import { ArticleList, ArticleViewSelector, type ArticleView } from 'entities/Article'
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks'
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice'
 import { Page } from 'shared/ui/Page/Page'
 import {
   getArticlesPageIsLoading,
   getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
-import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'
 
 interface ArticlesPageProps {
   className?: string
@@ -42,12 +42,11 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   }, [onLoadNextPage])
 
   useInitialEffect(() => {
-    void dispatch(articlesPageActions.initState())
-    void dispatch(fetchArticlesList({ page: 1 }))
+    void dispatch(initArticlesPage())
   })
 
   return (
-      <DynamicModuleLoader reducers={reducers}>
+      <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
           <Page
               onScrollEnd={handleScrollEnd}
               className={classNames(cls.wrapper, {}, [className])}

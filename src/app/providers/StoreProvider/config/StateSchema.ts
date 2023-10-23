@@ -1,5 +1,5 @@
-import { type To } from 'react-router-dom'
-import { type NavigateOptions } from 'react-router'
+// import { type To } from 'react-router-dom'
+// import { type NavigateOptions } from 'react-router'
 import { type AxiosInstance } from 'axios'
 import { type CounterSchema } from 'entities/Counter'
 import { type UserSchema } from 'entities/User'
@@ -39,7 +39,7 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 
 export interface ThunkExtraArgs {
   api: AxiosInstance
-  navigate?: (to: To, options?: NavigateOptions) => void
+  // navigate?: (to: To, options?: NavigateOptions) => void
 }
 
 export interface ThunkConfig<T = string> {

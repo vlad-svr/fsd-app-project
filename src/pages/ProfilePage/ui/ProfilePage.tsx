@@ -21,7 +21,7 @@ import { ProfilePageHeader } from 'pages/ProfilePage/ui/ProfilePageHeader/Profil
 import { type Country } from 'entities/Country'
 import { type Currency } from 'entities/Currency'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page/Page'
 
 const reducers: ReducersList = {
   profile: profileReducer

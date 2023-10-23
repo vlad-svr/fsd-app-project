@@ -6,7 +6,7 @@ import { ArticleList, ArticleViewSelector, type ArticleView } from 'entities/Art
 import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks'
 import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice'
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page/Page'
 import {
   getArticlesPageIsLoading,
   getArticlesPageView

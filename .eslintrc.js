@@ -43,6 +43,7 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/no-invalid-void-type': 'off',
+    'n/no-callback-literal': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' }],
     "react-hooks/rules-of-hooks": "error",

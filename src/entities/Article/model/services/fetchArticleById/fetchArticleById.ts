@@ -20,7 +20,7 @@ ThunkConfig
 
       return response.data
     } catch (e) {
-      console.error(e)
+      // console.log(e)
       return rejectWithValue('error')
     }
   }

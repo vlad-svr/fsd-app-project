@@ -15,6 +15,7 @@ import { AddCommentForm } from 'features/addCommentForm'
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
+import { Page } from 'shared/ui/Page/Page'
 import { RoutePaths } from 'shared/config/routeConfig/routeConfig'
 
 interface ArticleDetailsPageProps {
@@ -48,14 +49,14 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   if (!id) {
     return (
-        <div className={classNames(cls.wrapper, {}, [className])}>
+        <Page className={classNames(cls.wrapper, {}, [className])}>
             {t('article_not_found')}
-        </div>
+        </Page>
     )
   }
   return (
       <DynamicModuleLoader reducers={reducers}>
-          <div className={classNames(cls.wrapper, {}, [className])}>
+          <Page className={classNames(cls.wrapper, {}, [className])}>
               <Button theme={ButtonTheme.OUTLINE} onClick={handleBackToList}>
                   {t('back_to_list')}
               </Button>
@@ -63,7 +64,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
               <Text className={cls.comment_title} title={t('comments')}/>
               <AddCommentForm onSendComment={handleSendComment}/>
               <CommentList comments={comments} isLoading={commentsIsLoading}/>
-          </div>
+          </Page>
       </DynamicModuleLoader>
   )
 }

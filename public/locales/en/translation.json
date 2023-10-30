@@ -21,5 +21,9 @@
   "no_comments": "There are not comments yet",
   "enter_comment_text": "Enter comment text",
   "send": "Send",
-  "read_more": "Read more"
+  "read_more": "Read more",
+  "search": "Search",
+  "increasing": "Increasing",
+  "descending": "Descending",
+  "articles_not_found": "Articles not found"
 }

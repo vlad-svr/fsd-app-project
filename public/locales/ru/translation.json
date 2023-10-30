@@ -19,5 +19,9 @@
   "no_comments": "Комментарии отсутствуют",
   "enter_comment_text": "Введите текст комментария",
   "send": "Отправить",
-  "read_more": "Читать далее"
+  "read_more": "Читать далее",
+  "search": "Поиск",
+  "increasing": "Возрастанию",
+  "descending": "Убыванию",
+  "articles_not_found": "Статьи не найдены"
 }

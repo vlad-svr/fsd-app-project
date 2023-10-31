@@ -45,6 +45,7 @@ module.exports = {
     '@typescript-eslint/no-invalid-void-type': 'off',
     'n/no-callback-literal': 'off',
     'import/prefer-default-export': 'off',
+    '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error"

@@ -5,6 +5,7 @@ import classNames, { type Mods } from 'shared/lib/classNames/classNames'
 export enum TextTheme {
   PRIMARY = 'primary',
   ERROR = 'error',
+  INVERTED = 'inverted',
 }
 
 export enum TextAlign {

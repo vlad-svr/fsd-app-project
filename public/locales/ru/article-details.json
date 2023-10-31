@@ -2,5 +2,6 @@
   "article_not_found": "Статься не найдена",
   "article_details_loading_page_error": "Произошла ошибка при загрузке статьи.",
   "comments": "Комментарии",
-  "back_to_list": "Назад к списку"
+  "back_to_list": "Назад к списку",
+  "edit": "Редактировать"
 }

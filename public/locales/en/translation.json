@@ -25,5 +25,8 @@
   "search": "Search",
   "increasing": "Increasing",
   "descending": "Descending",
-  "articles_not_found": "Articles not found"
+  "articles_not_found": "Articles not found",
+  "create_new_article": "Create a new article",
+  "edit_article_with_id": "Edit the article with ID",
+  "create_article": "Create an article"
 }

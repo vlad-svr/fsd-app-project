@@ -23,5 +23,8 @@
   "search": "Поиск",
   "increasing": "Возрастанию",
   "descending": "Убыванию",
-  "articles_not_found": "Статьи не найдены"
+  "articles_not_found": "Статьи не найдены",
+  "create_new_article": "Создать новую статью",
+  "edit_article_with_id": "Редактирование статьи с ID",
+  "create_article": "Создать статью"
 }

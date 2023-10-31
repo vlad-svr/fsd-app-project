@@ -9,6 +9,8 @@ import { useAppDispatch, useInitialEffect, useThrottle } from 'shared/lib/hooks'
 import { getScrollByPath } from 'features/scrollStore/model/selectors/scrollStore'
 import { type StateSchema } from 'app/providers/StoreProvider'
 
+export const PAGE_ID = 'PAGE_ID'
+
 interface PageProps {
   children: ReactNode
   className?: string
@@ -47,6 +49,7 @@ export const Page = memo((props: PageProps) => {
           ref={wrapperRef}
           className={classNames(cls.wrapper, {}, [className])}
           onScroll={onScroll}
+          id={PAGE_ID}
         >
           {children}
           {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}

@@ -1,4 +1,5 @@
-import { userActions, userReducer, type UserSchema } from 'entities/User'
+import { userActions, userReducer } from '../slice/userSlice'
+import { type UserSchema } from '../types/userSchema'
 
 const mockGetItem = jest.fn()
 const mockSetItem = jest.fn()

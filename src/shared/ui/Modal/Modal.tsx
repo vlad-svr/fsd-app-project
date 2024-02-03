@@ -1,7 +1,7 @@
 import cls from './Modal.module.scss'
 import classNames, { type Mods } from 'shared/lib/classNames/classNames'
 import React, { type MouseEvent, type ReactNode, useCallback, useRef, useState } from 'react'
-import { Portal } from 'shared/ui/Portal/Portal'
+import { Portal } from '../Portal/Portal'
 
 const ANIMATION_DELAY_MS = 200
 

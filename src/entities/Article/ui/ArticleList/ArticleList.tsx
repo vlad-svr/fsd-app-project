@@ -1,7 +1,7 @@
 import { type HTMLAttributeAnchorTarget, memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import classNames from 'shared/lib/classNames/classNames'
-import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
+import { ArticleListItemSkeleton } from '../../ui/ArticleListItem/ArticleListItemSkeleton'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import cls from './ArticleList.module.scss'
 import { type Article, ArticleView } from '../../model/types/article'
@@ -40,7 +40,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow)
 
   const rowRender = ({
-    index, isScrolling, key, style
+    index, key, style
   }: ListRowProps) => {
     const items = []
     const fromIndex = index * itemsPerRow

@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { userEvent } from '@storybook/testing-library'
 import { renderWithProviders } from 'shared/lib/tests/renderWithProviders'
-import { Counter } from 'entities/Counter'
+import { Counter } from './Counter'
 
 const initialState = {
   counter: { value: 10 }

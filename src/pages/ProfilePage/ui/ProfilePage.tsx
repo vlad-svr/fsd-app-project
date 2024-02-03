@@ -17,7 +17,7 @@ import {
   ValidateProfileError
 } from 'entities/Profile'
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks'
-import { ProfilePageHeader } from 'pages/ProfilePage/ui/ProfilePageHeader/ProfilePageHeader'
+import { ProfilePageHeader } from '../ui/ProfilePageHeader/ProfilePageHeader'
 import { type Country } from 'entities/Country'
 import { type Currency } from 'entities/Currency'
 import { Text, TextTheme } from 'shared/ui/Text/Text'

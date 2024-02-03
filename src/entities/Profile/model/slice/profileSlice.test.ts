@@ -1,10 +1,14 @@
 import {
   profileActions,
-  profileReducer,
-  updateProfileData,
+  profileReducer
+} from '../slice/profileSlice'
+import {
+  updateProfileData
+} from '../services/updateProfileData/updateProfileData'
+import {
   ValidateProfileError,
   type ProfileSchema
-} from 'entities/Profile'
+} from '../types/profile'
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
 

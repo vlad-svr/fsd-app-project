@@ -29,7 +29,8 @@ module.exports = {
       'i18next',
       'jest-dom',
       'react-hooks',
-      'eslint-plugin-storybook'
+      'eslint-plugin-storybook',
+      'vlad-custom-plugin'
   ],
   rules: {
     'react/jsx-indent': [2, 4],
@@ -48,7 +49,8 @@ module.exports = {
     '@typescript-eslint/promise-function-async': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' }],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"
+    "react-hooks/exhaustive-deps": "error",
+    "vlad-custom-plugin/path-checker": "error"
   },
   "settings": {
     "react": {

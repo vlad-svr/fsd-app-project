@@ -19,7 +19,7 @@ describe('userSlice', () => {
   test('should set auth data', () => {
     const newUserData = { username: 'test name', id: '123' }
     const state: DeepPartial<UserSchema> = { authData: {} }
-    expect(userReducer(state as UserSchema, userActions.setAuthData(newUserData))).toEqual({ authData: newUserData })
+    expect(userReducer(state as UserSchema, userActions.setAuthData(newUserData))).toEqual({ _initialized: true, authData: newUserData })
   })
 
   test('should init auth data', () => {

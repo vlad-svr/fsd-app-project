@@ -34,7 +34,7 @@ export const CountrySelect = memo(({
           items={options}
           readonly={readonly}
           label={t('select_country')}
-          direction="top"
+          direction="top right"
           className={classNames('', {}, [className])}
       />
   )

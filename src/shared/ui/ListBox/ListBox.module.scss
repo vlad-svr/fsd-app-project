@@ -32,6 +32,22 @@
     opacity: 0.7;
 }
 
-.options_top {
+.options_top_left {
     bottom: 100%;
+    right: 0;
+}
+
+.options_top_right {
+    bottom: 100%;
+    left: 0;
+}
+
+.options_bottom_left {
+    top: 100%;
+    right: 0;
+}
+
+.options_bottom_right {
+    top: 100%;
+    left: 0;
 }

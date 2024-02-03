@@ -4,14 +4,13 @@ import { HStack } from '../Stack'
 import { Button } from '../Button/Button'
 import cls from './ListBox.module.scss'
 import classNames from 'shared/lib/classNames/classNames'
+import { type DropdownDirection } from 'shared/types/ui'
 
 export interface ListBoxItem {
   value: string
   content: ReactNode
   disabled?: boolean
 }
-
-type DropdownDirection = 'top' | 'bottom'
 
 interface ListBoxProps {
   items?: ListBoxItem[]
@@ -25,8 +24,10 @@ interface ListBoxProps {
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-  bottom: cls.optionsBottom,
-  top: cls.options_top
+  'bottom left': cls.options_bottom_left,
+  'bottom right': cls.options_bottom_right,
+  'top left': cls.options_top_left,
+  'top right': cls.options_top_right
 }
 
 export function ListBox (props: ListBoxProps) {
@@ -37,7 +38,7 @@ export function ListBox (props: ListBoxProps) {
     defaultValue,
     onChange,
     readonly,
-    direction = 'bottom',
+    direction = 'bottom left',
     label
   } = props
 

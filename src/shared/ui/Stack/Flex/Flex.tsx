@@ -1,0 +1,73 @@
+import { type ReactNode } from 'react'
+import cls from './Flex.module.scss'
+import classNames, { type Mods } from 'shared/lib/classNames/classNames'
+
+export type FlexJustify = 'start' | 'center' | 'end' | 'between'
+export type FlexAlign = 'start' | 'center' | 'end'
+export type FlexDirection = 'row' | 'column'
+export type FlexGap = '4' | '8' | '16' | '32'
+
+const justifyClasses: Record<FlexJustify, string> = {
+  start: cls.justify_start,
+  center: cls.justify_center,
+  end: cls.justify_end,
+  between: cls.justify_between
+}
+
+const alignClasses: Record<FlexAlign, string> = {
+  start: cls.align_start,
+  center: cls.align_center,
+  end: cls.align_end
+}
+
+const directionClasses: Record<FlexDirection, string> = {
+  row: cls.direction_row,
+  column: cls.direction_column
+}
+
+const gapClasses: Record<FlexGap, string> = {
+  4: cls.gap4,
+  8: cls.gap8,
+  16: cls.gap16,
+  32: cls.gap32
+}
+
+export interface FlexProps {
+  className?: string
+  children: ReactNode
+  justify?: FlexJustify
+  align?: FlexAlign
+  direction?: FlexDirection
+  gap?: FlexGap
+  max?: boolean
+}
+
+export const Flex = (props: FlexProps) => {
+  const {
+    className,
+    children,
+    justify = 'start',
+    align = 'center',
+    direction = 'row',
+    gap,
+    max
+  } = props
+
+  const classes = [
+    className,
+    justifyClasses[justify],
+    alignClasses[align],
+    directionClasses[direction],
+    gap && gapClasses[gap]
+  ]
+
+  const mods: Mods = {
+    [cls.max]: max
+  }
+
+  return (
+      <div className={classNames(cls.flex, mods, classes)}>
+          {children}
+      </div>
+  )
+}

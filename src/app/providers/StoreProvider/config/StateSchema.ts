@@ -3,17 +3,19 @@ import { type CounterSchema } from 'entities/Counter'
 import { type UserSchema } from 'entities/User'
 import { type LoginSchema } from 'features/AuthByUsername'
 import { type AnyAction, type CombinedState, type EnhancedStore, type Reducer, type ReducersMapObject } from '@reduxjs/toolkit'
-import { type ProfileSchema } from 'entities/Profile'
+import { type ProfileSchema } from 'features/editableProfileCard'
 import { type ArticleDetailsSchema } from 'entities/Article'
 import { type ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { type AddCommentFormSchema } from 'features/addCommentForm'
 import { type ArticlesPageSchema } from 'pages/ArticlesPage'
 import { type ScrollStoreSchema } from 'features/scrollStore'
+import { type rtkApi } from 'shared/api/rtkApi'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
   scrollStore: ScrollStoreSchema
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
   // Async reducers
   loginForm?: LoginSchema
@@ -22,7 +24,7 @@ export interface StateSchema {
   addCommentForm?: AddCommentFormSchema
   articlesPage?: ArticlesPageSchema
   articleDetailsPage?: ArticleDetailsPageSchema
-
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 }
 
 export type StateSchemaKey = keyof StateSchema

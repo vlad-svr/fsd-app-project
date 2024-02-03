@@ -965,6 +965,18 @@
       "userId": "1",
       "text": "gfgfgfdg",
       "id": "h11EeW0"
+    },
+    {
+      "articleId": "29",
+      "userId": "1",
+      "text": "hghg",
+      "id": "Oap2RVw"
+    },
+    {
+      "articleId": "29",
+      "userId": "1",
+      "text": "jhjh",
+      "id": "WKjKNgM"
     }
   ],
   "profile": [
@@ -983,7 +995,7 @@
       "id": "1",
       "first": "Vladislav",
       "lastname": "Pupkin",
-      "age": 28,
+      "age": 29,
       "currency": "USD",
       "country": "Belarus",
       "city": "Minks",

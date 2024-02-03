@@ -7,6 +7,7 @@ import { $api } from 'shared/api/api'
 import { type StateSchema, type ThunkExtraArgs } from './StateSchema'
 import { createReducerManager } from './reducerManager'
 import { scrollStoreReducer } from 'features/scrollStore'
+import { rtkApi } from 'shared/api/rtkApi'
 
 export function createReduxStore (
   initialState?: StateSchema,
@@ -17,7 +18,8 @@ export function createReduxStore (
     ...asyncReducers,
     counter: counterReducer,
     user: userReducer,
-    scrollStore: scrollStoreReducer
+    scrollStore: scrollStoreReducer,
+    [rtkApi.reducerPath]: rtkApi.reducer
   }
 
   const reducerManager = createReducerManager(rootReducers)
@@ -35,7 +37,7 @@ export function createReduxStore (
       thunk: {
         extraArgument
       }
-    })
+    }).concat(rtkApi.middleware)
   })
 
   // @ts-expect-error Temporary

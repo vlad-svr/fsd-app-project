@@ -23,7 +23,7 @@ export const Normal: Story = {
   }
 }
 
-export const topLeft: Story = {
+export const TopLeft: Story = {
   args: {
     direction: 'top left',
     value: '123',
@@ -34,7 +34,7 @@ export const topLeft: Story = {
   }
 }
 
-export const topRight: Story = {
+export const TopRight: Story = {
   args: {
     direction: 'top right',
     value: '123',
@@ -45,7 +45,7 @@ export const topRight: Story = {
   }
 }
 
-export const bottomLeft: Story = {
+export const BottomLeft: Story = {
   args: {
     direction: 'bottom left',
     value: '123',
@@ -56,7 +56,7 @@ export const bottomLeft: Story = {
   }
 }
 
-export const bottomRight: Story = {
+export const BottomRight: Story = {
   args: {
     direction: 'bottom right',
     value: '123',

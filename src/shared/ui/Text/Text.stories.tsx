@@ -19,6 +19,22 @@ export const Primary: Story = {
   }
 }
 
+export const SizeS: Story = {
+  args: {
+    title: 'Title Text',
+    text: 'Text',
+    size: TextSize.S
+  }
+}
+
+export const SizeM: Story = {
+  args: {
+    title: 'Title Text',
+    text: 'Text',
+    size: TextSize.M
+  }
+}
+
 export const SizeL: Story = {
   args: {
     title: 'Title Text',

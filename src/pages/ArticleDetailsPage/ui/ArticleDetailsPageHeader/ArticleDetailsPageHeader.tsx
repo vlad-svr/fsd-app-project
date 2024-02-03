@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom'
 import classNames from 'shared/lib/classNames/classNames'
 import { RoutePaths } from 'shared/config/routeConfig/routeConfig'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import cls from './ArticleDetailsPageHeader.module.scss'
 import { getArticleDetailsData } from 'entities/Article'
 import { getCanEditArticle } from '../../model/selectors/article'
+import { HStack } from 'shared/ui/Stack'
 
 interface ArticleDetailsPageHeaderProps {
   className?: string
@@ -29,19 +29,18 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
   }, [article?.id, navigate])
 
   return (
-      <div className={classNames(cls.wrapper, {}, [className])}>
+      <HStack max justify="between" className={classNames('', {}, [className])}>
           <Button theme={ButtonTheme.OUTLINE} onClick={handleBackToList}>
               {t('back_to_list')}
           </Button>
           {canEdit && (
               <Button
-                  className={cls.edit_btn}
                   theme={ButtonTheme.OUTLINE}
                   onClick={onEditArticle}
               >
                   {t('edit')}
               </Button>
           )}
-      </div>
+      </HStack>
   )
 })

@@ -4,10 +4,10 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { getProfileData, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile'
 import { useCallback } from 'react'
-import cls from './ProfilePageHeader.module.scss'
 import classNames from 'shared/lib/classNames/classNames'
 import { useAppDispatch } from 'shared/lib/hooks'
 import { getUserAuthData } from 'entities/User'
+import { HStack } from 'shared/ui/Stack'
 
 interface ProfilePageHeaderProps {
   className?: string
@@ -38,15 +38,13 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch])
 
   return (
-      <div className={classNames(cls.profile_page_header, {}, [className])}>
+      <HStack max justify="between" className={classNames('', {}, [className])}>
           <Text title={t('profile')} />
           {canEdit && (
-              <div className={cls.btns_wrapper}>{
+              <>{
                 readonly
                   ? (
                       <Button
-
-                          className={cls.edit_btn}
                           theme={ButtonTheme.OUTLINE}
                           onClick={onEdit}
                 >
@@ -54,9 +52,8 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                       </Button>
                     )
                   : (
-                      <>
+                      <HStack gap="8">
                           <Button
-                              className={cls.edit_btn}
                               theme={ButtonTheme.OUTLINE_RED}
                               onClick={onCancelEdit}
                   >
@@ -68,11 +65,11 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                   >
                               {t('save')}
                           </Button>
-                      </>
+                      </HStack>
                     )}
-              </div>
+              </>
           )
           }
-      </div>
+      </HStack>
   )
 }

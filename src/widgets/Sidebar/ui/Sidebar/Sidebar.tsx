@@ -7,6 +7,7 @@ import { LanguageSwitcher } from 'widgets/LanguageSwitcher'
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button'
 import { SidebarItem } from '../SidebarItem/SidebarItem'
 import { getSidebarItems } from '../../model/selectors/getSidebarItems'
+import { VStack } from 'shared/ui/Stack'
 
 interface SidebarProps {
   className?: string
@@ -45,9 +46,9 @@ const Sidebar = memo(({ className }: SidebarProps) => {
           >
               {collapsed ? '>' : '<'}
           </Button>
-          <div className={cls.navbar}>
+          <VStack gap="8" className={cls.navbar}>
               {itemList}
-          </div>
+          </VStack>
           <div className={classNames(cls.switchers)}>
               <ThemeSwitcher />
               <LanguageSwitcher short={collapsed} className={cls.lang} />

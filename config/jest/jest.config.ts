@@ -39,8 +39,16 @@ const config: Config = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
         '<rootDir>/__mocks__/fileMock.ts',
     '\\.s?css$': 'identity-obj-proxy'
-  }
-
+  },
+  reporters: [
+    'default',
+    ['jest-html-reporters', {
+      publicPath: '<rootDir>/reports/unit',
+      filename: 'report.html',
+      openReport: true,
+      inlineSource: true
+    }]
+  ]
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 

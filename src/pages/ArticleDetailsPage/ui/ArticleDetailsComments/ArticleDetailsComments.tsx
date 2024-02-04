@@ -15,8 +15,8 @@ import {
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 
 interface ArticleDetailsCommentsProps {
+  id?: string
   className?: string
-  id: string
 }
 
 export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) => {

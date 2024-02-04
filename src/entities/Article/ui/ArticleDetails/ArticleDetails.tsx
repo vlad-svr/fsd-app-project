@@ -25,8 +25,8 @@ import { useAppDispatch } from 'shared/lib/hooks'
 import { HStack, VStack } from 'shared/ui/Stack'
 
 interface ArticleDetailsProps {
+  id?: string
   className?: string
-  id: string
 }
 
 const reducers: ReducersList = {

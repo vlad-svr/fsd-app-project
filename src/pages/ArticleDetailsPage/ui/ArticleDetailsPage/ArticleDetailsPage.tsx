@@ -1,6 +1,5 @@
 import { memo } from 'react'
 import { useParams } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
 import classNames from 'shared/lib/classNames/classNames'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleDetails } from 'entities/Article'
@@ -23,7 +22,6 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const { className } = props
   const { id } = useParams<{ id: string }>()
-  const { t } = useTranslation('article-details')
 
   return (
       <DynamicModuleLoader reducers={reducers}>

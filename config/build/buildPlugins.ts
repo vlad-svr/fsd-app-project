@@ -3,6 +3,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin'
 import { type BuildOptions } from './types/config'
 import CopyPlugin from 'copy-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import CircularDependencyPlugin from 'circular-dependency-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
@@ -31,6 +32,10 @@ export function buildPlugins ({
     }),
     isDev && new ReactRefreshWebpackPlugin(),
     isDev && new webpack.HotModuleReplacementPlugin(),
-    isDev && new BundleAnalyzerPlugin({ openAnalyzer: false })
+    isDev && new BundleAnalyzerPlugin({ openAnalyzer: false }),
+    new CircularDependencyPlugin({
+      exclude: /a\.js|node_modules/,
+      failOnError: true
+    })
   ].filter(Boolean) as webpack.WebpackPluginInstance[]
 }

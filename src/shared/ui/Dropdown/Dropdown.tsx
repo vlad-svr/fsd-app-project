@@ -10,6 +10,7 @@ export interface DropdownItem {
   content?: ReactNode
   onClick?: () => void
   href?: string
+  hidden?: boolean
 }
 
 interface DropdownProps {
@@ -39,9 +40,14 @@ export function Dropdown (props: DropdownProps) {
               {trigger}
           </Menu.Button>
           <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
-              {items.map((item) => {
+              {items.map((item, index) => {
+                if (item.hidden) {
+                  return null
+                }
+
                 const content = ({ active }: { active: boolean }) => (
                     <button
+                        key={index}
                         type="button"
                         disabled={item.disabled}
                         onClick={item.onClick}

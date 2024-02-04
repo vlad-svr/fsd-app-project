@@ -6,7 +6,7 @@ import cn from 'shared/lib/classNames/classNames'
 import { useModalControl } from 'shared/lib/hooks'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { LoginModal } from 'features/AuthByUsername'
-import { getUserAuthData, userActions } from 'entities/User'
+import { getUserAuthData, isUserAdmin, isUserManager, userActions } from 'entities/User'
 import { Text } from 'shared/ui/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { RoutePaths } from 'shared/config/routeConfig/routeConfig'
@@ -23,6 +23,9 @@ const NavBar = memo(({ className }: NavBarProps) => {
   const authData = useSelector(getUserAuthData)
   const dispatch = useDispatch()
   const { isOpen: isAuthModalOpen, openModal, closeModal } = useModalControl()
+  const isAdmin = useSelector(isUserAdmin)
+  const isManager = useSelector(isUserManager)
+  const isAdminPanelAvailable = isAdmin || isManager
 
   const logout = () => {
     dispatch(userActions.logout())
@@ -45,8 +48,19 @@ const NavBar = memo(({ className }: NavBarProps) => {
             </AppLink>
             <Dropdown
                 items={[
-                  { content: t('profile'), href: RoutePaths.profile + authData.id },
-                  { content: t('logout'), onClick: logout }
+                  {
+                    content: t('admin_panel'),
+                    href: RoutePaths.admin_panel,
+                    hidden: !isAdminPanelAvailable
+                  },
+                  {
+                    content: t('profile'),
+                    href: RoutePaths.profile + authData.id
+                  },
+                  {
+                    content: t('logout'),
+                    onClick: logout
+                  }
                 ]}
                 trigger={<Avatar size={30} src={authData?.avatar}/>}
                 className={cls.dropdown}

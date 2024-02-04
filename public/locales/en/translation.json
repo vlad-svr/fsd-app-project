@@ -28,5 +28,7 @@
   "articles_not_found": "Articles not found",
   "create_new_article": "Create a new article",
   "edit_article_with_id": "Edit the article with ID",
-  "create_article": "Create an article"
+  "create_article": "Create an article",
+  "admin_panel": "Admin panel",
+  "forbidden_pag_title": "You don't have access to this page"
 }

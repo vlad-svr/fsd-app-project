@@ -10,6 +10,7 @@
   "Throw Error": "",
   "_ent": "",
   "about_us": "",
+  "admin_panel": "",
   "all_articles": "",
   "article_not_found": "",
   "articles_not_found": "",
@@ -30,6 +31,7 @@
   "enter_comment_text": "",
   "enter_password": "",
   "enter_username": "",
+  "forbidden_pag_title": "",
   "increasing": "",
   "increment": "",
   "it": "",
@@ -93,6 +95,7 @@
   "Редактировать": "",
   "Рекомендуем": "",
   "Сохранить": "",
+  "У вас нет доступа к этой странице": "",
   "Укажите валюту": "",
   "Укажите страну": "",
   "Читать далее": {

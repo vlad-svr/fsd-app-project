@@ -16,14 +16,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://sun9-42.userapi.com/s/v1/if1/IfjACAM7kcoNjo4zBdDpOYpc-gR-AAPafa7xuG3Lpg-PVEZU8TgdfEEKtG5e1pRg1Bmp_mgn.jpg?size=200x200&quality=96&crop=412,564,1001,1001&ava=1"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg"
     }
   ],

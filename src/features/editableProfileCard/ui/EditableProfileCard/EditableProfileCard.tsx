@@ -20,8 +20,8 @@ import { ValidateProfileError } from '../../model/types/editableProfileCardSchem
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 
 interface EditableProfileCardProps {
+  id?: string
   className?: string
-  id: string
 }
 
 const reducers: ReducersList = {

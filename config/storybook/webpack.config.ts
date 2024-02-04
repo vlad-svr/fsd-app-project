@@ -23,7 +23,7 @@ async function webpackFinal (config: webpack.Configuration) {
       config.plugins?.push(
         new webpack.DefinePlugin({
           _IS_DEV_: JSON.stringify(true),
-          _API_BASE_URL_: JSON.stringify('user'),
+          _API_BASE_URL_: JSON.stringify('https://testapi.com'),
           _PROJECT_: JSON.stringify('storybook')
         })
       )

@@ -4,6 +4,7 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider'
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator/RouterDecorator'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+import { SuspenseDecorator } from 'shared/config/storybook/SuspenseDecorator/SuspenseDecorator'
 
 const preview: Preview = {
   parameters: {
@@ -15,7 +16,7 @@ const preview: Preview = {
       }
     }
   },
-  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({}), RouterDecorator]
+  decorators: [ThemeDecorator(Theme.LIGHT), StoreDecorator({}), RouterDecorator, SuspenseDecorator]
 }
 
 export default preview

@@ -3,5 +3,6 @@ export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthDa
 export { getUserIsInit } from './model/selectors/getUserIsInit/getUserIsInit'
 export { isUserAdmin, isUserManager, getUserRoles } from './model/selectors/roleSelectors'
 
-export { type User, UserRole } from './model/types/user'
+export { UserRole } from './model/consts/consts'
+export type { User } from './model/types/user'
 export type { UserSchema } from './model/types/userSchema'

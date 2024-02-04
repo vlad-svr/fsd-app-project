@@ -14,6 +14,7 @@
         "moduleResolution": "node",
         // esModuleInterop allows us working with packages which use common js like we use regular packages with import require() module.export
         "esModuleInterop": true,
+        "isolatedModules": true,
         "allowSyntheticDefaultImports": true
     },
     "exclude": [

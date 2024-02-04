@@ -8,9 +8,12 @@ import { Card } from 'shared/ui/Card'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import cls from './ArticleListItem.module.scss'
-import {
-  type Article, ArticleBlockType, type ArticleTextBlock, ArticleView
+import type {
+  Article, ArticleTextBlock
 } from '../../model/types/article'
+import {
+  ArticleBlockType, ArticleView
+} from '../../model/consts/consts'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { RoutePaths } from 'shared/config/routeConfig/routeConfig'
 import { AppLink } from 'shared/ui/AppLink/AppLink'

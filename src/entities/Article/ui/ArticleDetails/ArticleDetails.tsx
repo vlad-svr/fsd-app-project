@@ -19,7 +19,8 @@ import {
   getArticleDetailsError,
   getArticleDetailsIsLoading
 } from '../../model/selectors/articleDetails'
-import { type ArticleBlock, ArticleBlockType } from '../../model/types/article'
+import { type ArticleBlock } from '../../model/types/article'
+import { ArticleBlockType } from '../../model/consts/consts'
 import classNames from 'shared/lib/classNames/classNames'
 import { useAppDispatch } from 'shared/lib/hooks'
 import { HStack, VStack } from 'shared/ui/Stack'

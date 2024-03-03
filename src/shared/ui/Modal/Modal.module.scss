@@ -17,19 +17,15 @@
   transition: 0.3s transform;
   transform: scale(0.5);
   max-width: 60%;
+  z-index: var(--modal-z-index);
 }
 
 .opened {
   pointer-events: auto;
   opacity: 1;
-  z-index: var(--modal-z-index);
 
   .content {
     transform: scale(1);
-  }
-
-  .overlay {
-    opacity: 1;
   }
 }
 
@@ -37,9 +33,5 @@
   .content {
     transform: scale(0.2);
     transition: 0.2s transform;
-  }
-
-  .overlay {
-    opacity: 0;
   }
 }

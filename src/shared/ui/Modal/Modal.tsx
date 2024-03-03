@@ -1,7 +1,8 @@
 import cls from './Modal.module.scss'
 import classNames, { type Mods } from 'shared/lib/classNames/classNames'
-import React, { type MouseEvent, type ReactNode, useCallback, useRef, useState } from 'react'
+import React, { type ReactNode, useCallback, useRef, useState } from 'react'
 import { Portal } from '../Portal/Portal'
+import { Overlay } from '../Overlay/Overlay'
 
 const ANIMATION_DELAY_MS = 200
 
@@ -13,7 +14,7 @@ interface ModalProps {
   onClose?: () => void
 }
 
-function Modal (props: ModalProps) {
+function Modal (props: Readonly<ModalProps>) {
   const { className, children, isOpen = false, onClose, lazy } = props
   const [isClosing, setIsClosing] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
@@ -55,10 +56,6 @@ function Modal (props: ModalProps) {
     setIsMounted(isOpen)
   }, [isOpen])
 
-  const onContentClick = (e: MouseEvent<HTMLDivElement>) => {
-    e.stopPropagation()
-  }
-
   if (lazy && !isMounted) {
     return null
   }
@@ -66,13 +63,9 @@ function Modal (props: ModalProps) {
   return (
       <Portal>
           <div className={classNames(cls.modal, mods, [className])}>
-              <div className={cls.overlay} onClick={closeHandler}>
-                  <div
-                      className={cls.content}
-                      onClick={onContentClick}
-                  >
-                      {children}
-                  </div>
+              <Overlay isOpen={isOpen} onClick={closeHandler}/>
+              <div className={cls.content}>
+                  {children}
               </div>
           </div>
       </Portal>

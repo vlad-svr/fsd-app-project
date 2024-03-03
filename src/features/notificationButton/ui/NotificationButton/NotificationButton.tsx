@@ -9,7 +9,6 @@ import cls from './NotificationButton.module.scss'
 import { Drawer } from '@/shared/ui/Drawer/Drawer'
 import { BrowserView, MobileView } from 'react-device-detect'
 import { useModalControl } from '@/shared/lib/hooks'
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider'
 
 interface NotificationButtonProps {
   className?: string
@@ -38,11 +37,9 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
           </BrowserView>
           <MobileView>
               {trigger}
-              <AnimationProvider>
-                  <Drawer isOpen={isOpen} onClose={closeDrawer}>
-                      <NotificationList className={classNames(cls.notifications, {}, [cls.mobile_notifications])} />
-                  </Drawer>
-              </AnimationProvider>
+              <Drawer isOpen={isOpen} onClose={closeDrawer}>
+                  <NotificationList className={classNames(cls.notifications, {}, [cls.mobile_notifications])} />
+              </Drawer>
           </MobileView>
       </div>
   )

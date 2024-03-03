@@ -44,6 +44,7 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 'off',
     '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/no-invalid-void-type': 'off',
+    '@typescript-eslint/consistent-type-imports': 'off',
     'n/no-callback-literal': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/promise-function-async': 'off',

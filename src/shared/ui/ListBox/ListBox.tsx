@@ -3,8 +3,8 @@ import { Listbox as HListBox } from '@headlessui/react'
 import { HStack } from '../Stack'
 import { Button } from '../Button/Button'
 import cls from './ListBox.module.scss'
-import classNames from 'shared/lib/classNames/classNames'
-import { type DropdownDirection } from 'shared/types/ui'
+import classNames from '@/shared/lib/classNames/classNames'
+import { type DropdownDirection } from '@/shared/types/ui'
 
 export interface ListBoxItem {
   value: string

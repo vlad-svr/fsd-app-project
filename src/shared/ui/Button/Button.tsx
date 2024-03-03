@@ -1,6 +1,6 @@
 import { type ButtonHTMLAttributes, memo } from 'react'
 import cls from './Button.module.scss'
-import classNames, { type Mods } from 'shared/lib/classNames/classNames'
+import classNames, { type Mods } from '@/shared/lib/classNames/classNames'
 
 enum ButtonTheme {
   PURE = 'pure',

@@ -1,10 +1,10 @@
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import classNames from 'shared/lib/classNames/classNames'
-import { Card } from 'shared/ui/Card/Card'
-import { Input } from 'shared/ui/Input/Input'
-import { type SortOrder } from 'shared/types'
+import classNames from '@/shared/lib/classNames/classNames'
+import { Card } from '@/shared/ui/Card/Card'
+import { Input } from '@/shared/ui/Input/Input'
+import { type SortOrder } from '@/shared/types'
 import {
   type ArticleType,
   type ArticleView,
@@ -12,7 +12,7 @@ import {
   ArticleViewSelector,
   ArticleSortSelector,
   ArticleTypeTabs
-} from 'entities/Article'
+} from '@/entities/Article'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import cls from './ArticlesPageFilters.module.scss'
 import {
@@ -21,7 +21,7 @@ import {
   getArticlesPageView
 } from '../../model/selectors/articlesPageSelectors'
 import { articlesPageActions } from '../../model/slices/articlesPageSlice'
-import { useAppDispatch, useDebounce } from 'shared/lib/hooks'
+import { useAppDispatch, useDebounce } from '@/shared/lib/hooks'
 
 interface ArticlesPageFiltersProps {
   className?: string

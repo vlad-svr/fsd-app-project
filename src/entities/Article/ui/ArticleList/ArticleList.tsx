@@ -1,15 +1,15 @@
 import { type HTMLAttributeAnchorTarget, memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import classNames from 'shared/lib/classNames/classNames'
+import classNames from '@/shared/lib/classNames/classNames'
 import { ArticleListItemSkeleton } from '../../ui/ArticleListItem/ArticleListItemSkeleton'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import cls from './ArticleList.module.scss'
 import type { Article } from '../../model/types/article'
 import { ArticleView } from '../../model/consts/consts'
-import { Text } from 'shared/ui/Text'
-import { TextSize } from 'shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
+import { TextSize } from '@/shared/ui/Text/Text'
 import { List, type ListRowProps, WindowScroller } from 'react-virtualized'
-import { PAGE_ID } from 'widgets/Page/Page'
+import { PAGE_ID } from '@/widgets/Page/Page'
 
 interface ArticleListProps {
   articles: Article[]

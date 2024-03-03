@@ -1,13 +1,13 @@
 // import { type To, type NavigateOptions } from 'react-router-dom'
 import { type CombinedState, type Reducer } from 'redux'
 import { configureStore, type ReducersMapObject } from '@reduxjs/toolkit'
-import { counterReducer } from 'entities/Counter'
-import { userReducer } from 'entities/User'
-import { $api } from 'shared/api/api'
+import { counterReducer } from '@/entities/Counter'
+import { userReducer } from '@/entities/User'
+import { $api } from '@/shared/api/api'
 import { type StateSchema, type ThunkExtraArgs } from './StateSchema'
 import { createReducerManager } from './reducerManager'
-import { scrollStoreReducer } from 'features/scrollStore'
-import { rtkApi } from 'shared/api/rtkApi'
+import { scrollStoreReducer } from '@/features/scrollStore'
+import { rtkApi } from '@/shared/api/rtkApi'
 
 export function createReduxStore (
   initialState?: StateSchema,

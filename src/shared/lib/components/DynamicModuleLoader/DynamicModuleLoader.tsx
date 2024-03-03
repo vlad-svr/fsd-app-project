@@ -5,7 +5,7 @@ import {
   type ReduxStoreWithManager,
   type StateSchema,
   type StateSchemaKey
-} from 'app/providers/StoreProvider/config/StateSchema'
+} from '@/app/providers/StoreProvider/config/StateSchema'
 
 export type ReducersList = {
   [name in StateSchemaKey]?: Reducer<NonNullable<StateSchema[name]>>;

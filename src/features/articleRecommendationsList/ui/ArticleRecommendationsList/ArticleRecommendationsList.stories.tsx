@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ArticleRecommendationsList } from './ArticleRecommendationsList'
-import { type Article } from 'entities/Article'
+import { type Article } from '@/entities/Article'
 
 const article: Article = {
   id: '1',

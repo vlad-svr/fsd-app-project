@@ -46,3 +46,10 @@
         transform: translateY(0%);
     }
 }
+
+.is_closing {
+    .content {
+        transform: translateY(100%);
+        transition: 0.2s transform;
+    }
+}

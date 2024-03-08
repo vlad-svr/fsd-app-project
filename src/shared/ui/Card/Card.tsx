@@ -8,17 +8,24 @@ export enum CardTheme {
 }
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
+  children: ReactNode
   theme?: CardTheme
   className?: string
-  children: ReactNode
+  max?: boolean
 }
 
 export const Card = memo((props: CardProps) => {
-  const { className, children, theme = CardTheme.NORMAL, ...otherProps } = props
+  const {
+    className,
+    children,
+    theme = CardTheme.NORMAL,
+    max,
+    ...otherProps
+  } = props
 
   return (
       <div
-          className={classNames(cls.wrapper, {}, [className, cls[theme]])}
+          className={classNames(cls.wrapper, { [cls.max]: max }, [className, cls[theme]])}
           {...otherProps}
         >
           {children}

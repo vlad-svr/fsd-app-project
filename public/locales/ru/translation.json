@@ -28,5 +28,8 @@
   "edit_article_with_id": "Редактирование статьи с ID",
   "create_article": "Создать статью",
   "admin_panel": "Админ панель",
-  "forbidden_pag_title": "У вас нет доступа к этой странице"
+  "forbidden_pag_title": "У вас нет доступа к этой странице",
+  "your_feedback": "Ваш отзыв",
+  "close": "Закрыть",
+  "open": "Открыть"
 }

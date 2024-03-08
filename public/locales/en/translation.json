@@ -30,5 +30,8 @@
   "edit_article_with_id": "Edit the article with ID",
   "create_article": "Create an article",
   "admin_panel": "Admin panel",
-  "forbidden_pag_title": "You don't have access to this page"
+  "forbidden_pag_title": "You don't have access to this page",
+  "your_feedback": "Your feedback",
+  "close": "Close",
+  "open": "Open"
 }

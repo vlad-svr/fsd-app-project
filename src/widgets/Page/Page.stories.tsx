@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Page } from './Page'
 
 const meta = {
-  title: 'Shared/Page',
+  title: 'Widgets/Page',
   component: Page,
   argTypes: {
   }

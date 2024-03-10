@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { NotificationButton } from './NotificationButton'
 
 const meta = {
-  title: 'Shared/NotificationButton',
+  title: 'Features/NotificationButton',
   component: NotificationButton
 } satisfies Meta<typeof NotificationButton>
 

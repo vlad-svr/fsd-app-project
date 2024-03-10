@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { RatingCard } from './RatingCard'
 
 const meta = {
-  title: 'Shared/RatingCard',
+  title: 'Entities/Rating/RatingCard',
   component: RatingCard,
   argTypes: {
   }
@@ -13,5 +13,5 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Normal: Story = {
-  args: {}
+  args: { rate: 3 }
 }

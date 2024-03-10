@@ -6,7 +6,7 @@ import { Theme } from '@/app/providers/ThemeProvider'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 const meta = {
-  title: 'Widget/NavBar',
+  title: 'Widgets/NavBar',
   component: NavBar
 } satisfies Meta<typeof NavBar>
 

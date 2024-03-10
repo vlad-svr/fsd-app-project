@@ -51,7 +51,14 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
-    "vlad-custom-plugin/path-checker": "error"
+    "vlad-custom-plugin/path-checker": ["error", {alias: '@'}],
+    "vlad-custom-plugin/public-api-import": [
+        "error",
+        {
+            alias: '@',
+            testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx']
+        }
+    ]
   },
   "settings": {
     "react": {

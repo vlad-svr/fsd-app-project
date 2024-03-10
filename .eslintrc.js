@@ -30,7 +30,8 @@ module.exports = {
       'jest-dom',
       'react-hooks',
       'eslint-plugin-storybook',
-      'vlad-custom-plugin'
+      'vlad-custom-plugin',
+      "unused-imports"
   ],
   rules: {
     'react/jsx-indent': [2, 4],
@@ -52,6 +53,7 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "vlad-custom-plugin/path-checker": ["error", {alias: '@'}],
+    "unused-imports/no-unused-imports": "error",
     "vlad-custom-plugin/layer-imports": [
         "error",
         {

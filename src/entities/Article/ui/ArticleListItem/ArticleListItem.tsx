@@ -15,8 +15,8 @@ import {
   ArticleBlockType, ArticleView
 } from '../../model/consts/consts'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-import { RoutePaths } from '@/shared/config/routeConfig/routeConfig'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
+import { RoutePaths } from '@/shared/constants/router'
 
 interface ArticleListItemProps {
   article: Article

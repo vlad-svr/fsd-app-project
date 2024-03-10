@@ -3,11 +3,11 @@ import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import classNames from '@/shared/lib/classNames/classNames'
-import { RoutePaths } from '@/shared/config/routeConfig/routeConfig'
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
 import { getArticleDetailsData } from '@/entities/Article'
 import { getCanEditArticle } from '../../model/selectors/article'
 import { HStack } from '@/shared/ui/Stack'
+import { RoutePaths } from '@/shared/constants/router'
 
 interface ArticleDetailsPageHeaderProps {
   className?: string

@@ -9,11 +9,11 @@ import { LoginModal } from '@/features/AuthByUsername'
 import { getUserAuthData } from '@/entities/User'
 import { Text } from '@/shared/ui/Text'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
-import { RoutePaths } from '@/shared/config/routeConfig/routeConfig'
 import { TextTheme } from '@/shared/ui/Text/Text'
 import { HStack } from '@/shared/ui/Stack'
 import { AvatarDropdown } from '@/features/avatarDropdown'
 import { NotificationButton } from '@/features/notificationButton'
+import { RoutePaths } from '@/shared/constants/router'
 
 interface NavBarProps {
   className?: string

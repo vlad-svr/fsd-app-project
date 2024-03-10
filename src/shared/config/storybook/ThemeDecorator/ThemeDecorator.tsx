@@ -1,6 +1,7 @@
-import '@/app/styles/index.scss'
 import { type Decorator } from '@storybook/react'
-import { type Theme, ThemeProvider } from '@/app/providers/ThemeProvider'
+// eslint-disable-next-line
+import { ThemeProvider } from '@/app/providers/ThemeProvider'
+import { Theme } from '@/shared/constants/theme'
 
 export const ThemeDecorator = (theme: Theme): Decorator => (StoryComponent) => {
   return <ThemeProvider initialTheme={theme}>

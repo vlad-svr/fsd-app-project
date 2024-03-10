@@ -52,6 +52,13 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "vlad-custom-plugin/path-checker": ["error", {alias: '@'}],
+    "vlad-custom-plugin/layer-imports": [
+        "error",
+        {
+            alias: '@',
+            ignoreImportPatterns: ['**/StoreProvider', '**/testing']
+        }
+    ],
     "vlad-custom-plugin/public-api-import": [
         "error",
         {

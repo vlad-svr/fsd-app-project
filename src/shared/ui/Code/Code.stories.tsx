@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { Code } from '../Code/Code'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from '@/app/providers/ThemeProvider'
+
+import { Theme } from '@/shared/constants/theme'
 
 const meta = {
   title: 'Shared/Code',

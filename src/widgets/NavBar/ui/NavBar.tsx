@@ -12,7 +12,7 @@ import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
 import { HStack } from '@/shared/ui/Stack'
 import { AvatarDropdown } from '@/features/avatarDropdown'
 import { NotificationButton } from '@/features/notificationButton'
-import { RoutePaths } from '@/shared/constants/router'
+import { getRouteArticleCreate } from '@/shared/constants/router'
 
 interface NavBarProps {
   className?: string
@@ -32,7 +32,7 @@ const NavBar = memo(({ className }: NavBarProps) => {
                 theme={TextTheme.INVERTED}
             />
             <AppLink
-                to={RoutePaths.article_create}
+                to={getRouteArticleCreate()}
                 theme={AppLinkTheme.SECONDARY}
                 className={cls.create_link}
             >

@@ -11,17 +11,27 @@ enum AppRoutes {
   FORBIDDEN_PAGE = 'forbidden',
 }
 
-const RoutePaths: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: '/',
-  [AppRoutes.ABOUT]: '/about',
-  [AppRoutes.PROFILE]: '/profile/',
-  [AppRoutes.ARTICLES]: '/articles',
-  [AppRoutes.ARTICLE_DETAILS]: '/articles/', // + id
-  [AppRoutes.ARTICLE_CREATE]: '/articles/new',
-  [AppRoutes.ARTICLE_EDIT]: '/articles/:id/edit',
-  [AppRoutes.ADMIN_PANEL]: '/admin-panel',
-  [AppRoutes.FORBIDDEN_PAGE]: '/forbidden',
-  [AppRoutes.NOT_FOUND]: '*'
+const getRouteMain = () => '/'
+const getRouteAbout = () => '/about'
+const getRouteProfile = (id: string) => `/profile/${id}`
+const getRouteArticles = () => '/articles'
+const getRouteArticleDetails = (id: string) => `/articles/${id}`
+const getRouteArticleCreate = () => '/articles/new'
+const getRouteArticleEdit = (id: string) => `/articles/${id}/edit`
+const getRouteAdmin = () => '/admin-panel'
+const getRouteForbidden = () => '/forbidden'
+const getRouteNotFound = () => '*'
+
+export {
+  getRouteMain,
+  getRouteAbout,
+  getRouteAdmin,
+  getRouteProfile,
+  getRouteArticles,
+  getRouteNotFound,
+  getRouteForbidden,
+  getRouteArticleEdit,
+  getRouteArticleCreate,
+  getRouteArticleDetails
 }
-export { RoutePaths }
 export { AppRoutes }

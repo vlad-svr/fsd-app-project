@@ -38,7 +38,8 @@ const config: Config = {
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
         '<rootDir>/__mocks__/fileMock.ts',
-    '\\.s?css$': 'identity-obj-proxy'
+    '\\.s?css$': 'identity-obj-proxy',
+    '^@/(.*)$': '<rootDir>/src/$1'
   },
   reporters: [
     'default',

@@ -6,9 +6,15 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-actions',
-    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        backgrounds: false
+      }
+    },
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
+    '@storybook/addon-themes',
     'storybook-addon-mock'
   ],
   framework: {

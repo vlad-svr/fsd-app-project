@@ -1,4 +1,4 @@
-import { type ChangeEvent, memo, useMemo } from 'react'
+import { type ChangeEvent, useMemo } from 'react'
 import classNames, { type Mods } from '@/shared/lib/classNames/classNames'
 import cls from './Select.module.scss'
 
@@ -63,4 +63,4 @@ const InternalSelect = <T extends string>(props: SelectProps<T>) => {
   )
 }
 
-export const Select = memo(InternalSelect)
+export const Select = InternalSelect

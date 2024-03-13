@@ -7,10 +7,11 @@ import cls from './Page.module.scss'
 import { scrollStoreActions, getScrollByPath } from '@/features/scrollStore'
 import { useAppDispatch, useInitialEffect, useThrottle } from '@/shared/lib/hooks'
 import { type StateSchema } from '@/app/providers/StoreProvider'
+import { TestProps } from '@/shared/types/tests'
 
 export const PAGE_ID = 'PAGE_ID'
 
-interface PageProps {
+interface PageProps extends TestProps {
   children: ReactNode
   className?: string
   onScrollEnd?: () => void
@@ -49,6 +50,7 @@ export const Page = memo((props: PageProps) => {
           className={classNames(cls.wrapper, {}, [className])}
           onScroll={onScroll}
           id={PAGE_ID}
+          data-testid={props['data-testid'] ?? 'Page'}
         >
           {children}
           {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}

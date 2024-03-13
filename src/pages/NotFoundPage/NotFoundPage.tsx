@@ -7,7 +7,7 @@ function NotFoundPage () {
   const { t } = useTranslation()
 
   return (
-      <Page className={styles.wrapper}>
+      <Page data-testid="NotFoundPage" className={styles.wrapper}>
           {t('page_not_found')}
       </Page>
   )

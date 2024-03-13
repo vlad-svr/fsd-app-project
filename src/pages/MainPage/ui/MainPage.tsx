@@ -4,9 +4,11 @@ import { Page } from '@/widgets/Page'
 function MainPage () {
   const { t } = useTranslation()
 
-  return <Page>
-      {t('main_page')}
-  </Page>
+  return (
+      <Page data-testid="MainPage">
+          {t('main_page')}
+      </Page>
+  )
 }
 
 export default MainPage

@@ -58,11 +58,11 @@ const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     roles: [UserRole.ADMIN, UserRole.MANAGER]
   },
   [AppRoutes.NOT_FOUND]: {
-    path: getRouteForbidden(),
+    path: getRouteNotFound(),
     element: <NotFoundPage />
   },
   [AppRoutes.FORBIDDEN_PAGE]: {
-    path: getRouteNotFound(),
+    path: getRouteForbidden(),
     element: <ForbiddenPage />
   }
 }

@@ -8,10 +8,7 @@ import { type SortOrder } from '@/shared/types'
 import {
   type ArticleType,
   type ArticleView,
-  type ArticleSortField,
-  ArticleViewSelector,
-  ArticleSortSelector,
-  ArticleTypeTabs
+  type ArticleSortField
 } from '@/entities/Article'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import cls from './ArticlesPageFilters.module.scss'
@@ -22,6 +19,9 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import { articlesPageActions } from '../../model/slices/articlesPageSlice'
 import { useAppDispatch, useDebounce } from '@/shared/lib/hooks'
+import { ArticleViewSelector } from '@/features/ArticleViewSelector'
+import { ArticleSortSelector } from '@/features/ArticleSortSelector'
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs'
 
 interface ArticlesPageFiltersProps {
   className?: string

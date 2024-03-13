@@ -2,9 +2,9 @@ import classNames from '@/shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
 import { memo, useMemo } from 'react'
 import { Select, type SelectOption } from '@/shared/ui/Select'
-import { ArticleSortField } from '../../model/consts/consts'
 import { type SortOrder } from '@/shared/types'
 import cls from './ArticleSortSelector.module.scss'
+import { ArticleSortField } from '@/entities/Article'
 
 interface ArticleSortSelectorProps {
   className?: string

@@ -14,10 +14,12 @@ export function buildPlugins ({
   apiURL,
   project
 }: BuildOptions): webpack.WebpackPluginInstance[] {
+  const isProd = !isDev
+
   return [
     new HTMLWebpackPlugin({ template: paths.html }),
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({
+    isProd && new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[name].[contenthash:8].css'
     }),
@@ -26,7 +28,7 @@ export function buildPlugins ({
       _API_BASE_URL_: JSON.stringify(apiURL),
       _PROJECT_: JSON.stringify(project)
     }),
-    new CopyPlugin({
+    isProd && new CopyPlugin({
       patterns: [
         { from: paths.locales, to: paths.buildLocales }
       ]

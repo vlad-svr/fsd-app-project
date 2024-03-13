@@ -1,7 +1,8 @@
 function buildSvgLoader () {
   return {
     test: /\.svg$/i,
-    use: ['@svgr/webpack']
+    use: ['@svgr/webpack'],
+    exclude: /node_modules/
   }
 }
 

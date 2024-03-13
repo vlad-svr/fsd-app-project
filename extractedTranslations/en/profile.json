@@ -1,0 +1,21 @@
+{
+  "cancel": "",
+  "city": "",
+  "edit": "",
+  "enter_username": "",
+  "loading_profile_error": "",
+  "profile": "",
+  "put_avatar_link": "",
+  "save": "",
+  "try_to_reload_page": "",
+  "validation_errors": {
+    "incorrect_age": "",
+    "incorrect_country": "",
+    "incorrect_user_data": "",
+    "no_data": "",
+    "server_error": ""
+  },
+  "your_age": "",
+  "your_name": "",
+  "your_surname": ""
+}

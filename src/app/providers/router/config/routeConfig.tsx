@@ -66,5 +66,4 @@ const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     element: <ForbiddenPage />
   }
 }
-
 export { routeConfig }

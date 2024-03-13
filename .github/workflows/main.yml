@@ -1,27 +1,35 @@
 name: Linting, testing, building
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  pipeline:
+  build-and-ui-testing:
     runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     strategy:
       matrix:
         node-version: [ 17.x ]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Setup Node.js environment
+      - name: Setup Node.js environment ${{ matrix.node-version }}
         uses: actions/setup-node@v2.5.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-
       - name: Cache Node Modules
         uses: actions/cache@v2
         with:
@@ -30,30 +38,61 @@ jobs:
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-npm-
-
       - name: Install modules
-        run: npm install
-
-      - name: Build Project
+        run: npm ci
+      - name: Build Production Project
         run: npm run build:prod
         if: always()
-
-      - name: Code linting
-        run: npm run lint:ts
-        if: always()
-
-      - name: Styles linting
-        run: npm run lint:css
-        if: always()
-
-      - name: Unit testing
-        run: npm run test:unit
-        if: always()
-
       - name: Build storybook
         run: npm run storybook:build
         if: always()
+      - name: Screenshot testing
+        run: npm run test:ui:ci
+        if: always()
+      - name: Generate HTML report
+        run: npm run test:ui:report
+        if: always()
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+        if: always()
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        if: always()
+        with:
+          path: '.loki'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: always()
+        uses: actions/deploy-pages@v1
 
-#      - name: Screenshot testing
-#        run: npm run test:ui:ci:tempfix
-#        if: always()
+  checks:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 17.x ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js environment ${{ matrix.node-version }}
+        uses: actions/setup-node@v2.5.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+      - name: Install modules
+        run: npm ci
+      - name: Linting typescript
+        run: npm run lint:ts
+        if: always()
+      - name: Linting css
+        run: npm run lint:css
+      - name: unit testing
+        if: always()
+        run: npm run test:unit

@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { userEvent } from '@storybook/testing-library'
+import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from '@/shared/lib/tests/renderWithProviders'
 import { Counter } from './Counter'
 

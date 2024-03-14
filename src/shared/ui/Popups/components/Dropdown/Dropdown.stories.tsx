@@ -6,8 +6,7 @@ import { Dropdown } from './Dropdown'
 const meta = {
   title: 'Shared/Dropdown',
   component: Dropdown,
-  argTypes: {
-  }
+  argTypes: {}
 } satisfies Meta<typeof Dropdown>
 
 export default meta

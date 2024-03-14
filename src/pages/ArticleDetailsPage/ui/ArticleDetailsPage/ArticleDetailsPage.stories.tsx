@@ -23,7 +23,8 @@ const article: Article = {
   user: {
     id: '1',
     username: 'dsds',
-    avatar: 'https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg'
+    avatar:
+      'https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg'
   },
   blocks: [
     {
@@ -54,9 +55,11 @@ const article: Article = {
 }
 
 export const Normal: Story = {
-  decorators: [StoreDecorator({
-    articleDetails: {
-      data: article
-    }
-  })]
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        data: article
+      }
+    })
+  ]
 }

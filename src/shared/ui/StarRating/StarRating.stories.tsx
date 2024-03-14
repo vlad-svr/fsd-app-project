@@ -5,8 +5,7 @@ import { StarRating } from './StarRating'
 const meta = {
   title: 'Shared/StarRating',
   component: StarRating,
-  argTypes: {
-  }
+  argTypes: {}
 } satisfies Meta<typeof StarRating>
 
 export default meta

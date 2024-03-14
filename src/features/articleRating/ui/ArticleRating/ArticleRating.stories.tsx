@@ -18,9 +18,7 @@ export const Normal: Story = {
         url: `${_API_BASE_URL_}/article-ratings?userId=1&articleId=1`,
         method: 'GET',
         status: 200,
-        response: [
-          { rate: 4 }
-        ]
+        response: [{ rate: 4 }]
       }
     ]
   }

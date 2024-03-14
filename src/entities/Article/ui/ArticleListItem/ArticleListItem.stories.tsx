@@ -22,13 +22,10 @@ const article: Article = {
   user: {
     id: '1',
     username: 'fdfdfd',
-    avatar: 'https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg'
+    avatar:
+      'https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg'
   },
-  type: [
-    ArticleType.IT,
-    ArticleType.ECONOMICS,
-    ArticleType.SCIENCE
-  ],
+  type: [ArticleType.IT, ArticleType.ECONOMICS, ArticleType.SCIENCE],
   blocks: [
     {
       id: '1',

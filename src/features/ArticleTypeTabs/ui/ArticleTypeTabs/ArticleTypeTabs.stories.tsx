@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { ArticleTypeTabs } from './ArticleTypeTabs'
 import { ArticleType } from '@/entities/Article'
+import { fn } from '@storybook/test'
 
 const meta = {
   title: 'Entities/Article/ArticleTypeTabs',
@@ -13,6 +14,7 @@ type Story = StoryObj<typeof meta>
 
 export const Normal: Story = {
   args: {
-    value: ArticleType.IT
+    value: ArticleType.IT,
+    onChangeType: fn()
   }
 }

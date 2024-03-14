@@ -24,7 +24,8 @@ const article: Article = {
   user: {
     id: '1',
     username: 'dsds',
-    avatar: 'https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg'
+    avatar:
+      'https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg'
   },
   blocks: [
     {
@@ -58,31 +59,37 @@ export const Normal: Story = {
   args: {
     id: '1'
   },
-  decorators: [StoreDecorator({
-    articleDetails: {
-      data: article
-    }
-  })]
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        data: article
+      }
+    })
+  ]
 }
 
 export const Loading: Story = {
   args: {
     id: '1'
   },
-  decorators: [StoreDecorator({
-    articleDetails: {
-      isLoading: true
-    }
-  })]
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        isLoading: true
+      }
+    })
+  ]
 }
 
 export const Error: Story = {
   args: {
     id: '1'
   },
-  decorators: [StoreDecorator({
-    articleDetails: {
-      error: 'error'
-    }
-  })]
+  decorators: [
+    StoreDecorator({
+      articleDetails: {
+        error: 'error'
+      }
+    })
+  ]
 }

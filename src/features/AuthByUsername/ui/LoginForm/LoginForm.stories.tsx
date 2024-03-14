@@ -14,21 +14,25 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {}
 
 export const WithError: Story = {
-  decorators: [StoreDecorator({
-    loginForm: {
-      username: '123',
-      password: '123',
-      error: 'This is error message'
-    }
-  })]
+  decorators: [
+    StoreDecorator({
+      loginForm: {
+        username: '123',
+        password: '123',
+        error: 'This is error message'
+      }
+    })
+  ]
 }
 
 export const WithLoading: Story = {
-  decorators: [StoreDecorator({
-    loginForm: {
-      username: '123',
-      password: '123',
-      isLoading: true
-    }
-  })]
+  decorators: [
+    StoreDecorator({
+      loginForm: {
+        username: '123',
+        password: '123',
+        isLoading: true
+      }
+    })
+  ]
 }

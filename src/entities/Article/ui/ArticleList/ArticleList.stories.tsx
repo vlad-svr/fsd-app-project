@@ -22,13 +22,10 @@ const article: Article = {
   user: {
     id: '1',
     username: 'fdfd',
-    avatar: 'https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg'
+    avatar:
+      'https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg'
   },
-  type: [
-    ArticleType.IT,
-    ArticleType.ECONOMICS,
-    ArticleType.SCIENCE
-  ],
+  type: [ArticleType.IT, ArticleType.ECONOMICS, ArticleType.SCIENCE],
   blocks: [
     {
       id: '1',
@@ -109,12 +106,10 @@ export const LoadingSmall: Story = {
 
 export const ListSmall: Story = {
   args: {
-    articles: new Array(9)
-      .fill(0)
-      .map((item, index) => ({
-        ...article,
-        id: String(index)
-      })),
+    articles: new Array(9).fill(0).map((item, index) => ({
+      ...article,
+      id: String(index)
+    })),
     isLoading: false,
     view: ArticleView.SMALL
   }
@@ -122,12 +117,10 @@ export const ListSmall: Story = {
 
 export const ListBig: Story = {
   args: {
-    articles: new Array(9)
-      .fill(0)
-      .map((item, index) => ({
-        ...article,
-        id: String(index)
-      })),
+    articles: new Array(9).fill(0).map((item, index) => ({
+      ...article,
+      id: String(index)
+    })),
     isLoading: false,
     view: ArticleView.BIG
   }

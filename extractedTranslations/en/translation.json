@@ -1,5 +1,6 @@
 {
   "Login": "",
+  "Throw Error": "",
   "admin_panel": "",
   "all_articles": "",
   "articles_not_found": "",
@@ -16,6 +17,7 @@
   "enter_comment_text": "",
   "enter_password": "",
   "enter_username": "",
+  "forbidden_pag_title": "",
   "increasing": "",
   "increment": "",
   "it": "",

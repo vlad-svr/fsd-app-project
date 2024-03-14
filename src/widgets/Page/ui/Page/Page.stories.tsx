@@ -5,8 +5,7 @@ import { Page } from './Page'
 const meta = {
   title: 'Widgets/Page',
   component: Page,
-  argTypes: {
-  }
+  argTypes: {}
 } satisfies Meta<typeof Page>
 
 export default meta

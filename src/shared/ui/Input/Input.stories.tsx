@@ -5,8 +5,7 @@ import { Input } from './Input'
 const meta = {
   title: 'Shared/Input',
   component: Input,
-  argTypes: {
-  }
+  argTypes: {}
 } satisfies Meta<typeof Input>
 
 export default meta

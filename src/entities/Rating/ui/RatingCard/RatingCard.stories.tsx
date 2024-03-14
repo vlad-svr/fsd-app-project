@@ -5,8 +5,7 @@ import { RatingCard } from './RatingCard'
 const meta = {
   title: 'Entities/Rating/RatingCard',
   component: RatingCard,
-  argTypes: {
-  }
+  argTypes: {}
 } satisfies Meta<typeof RatingCard>
 
 export default meta

@@ -8,8 +8,7 @@ import { Theme } from '@/shared/constants/theme'
 const meta = {
   title: 'Widgets/Sidebar',
   component: Sidebar,
-  argTypes: {
-  }
+  argTypes: {}
 } satisfies Meta<typeof Sidebar>
 
 export default meta
@@ -35,7 +34,7 @@ export const Dark: Story = {
 export const NoAuth: Story = {
   decorators: [
     StoreDecorator({
-      user: { }
+      user: {}
     })
   ]
 }

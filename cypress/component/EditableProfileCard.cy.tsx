@@ -1,7 +1,7 @@
 import {EditableProfileCard} from '../../src/features/editableProfileCard';
 import {TestProvider} from '../../src/shared/lib/tests/renderWithProviders/renderWithProviders';
 
-const USER_ID = 4
+const USER_ID = '4'
 
 describe('EditableProfileCard.cy.tsx', () => {
   it('playground', () => {

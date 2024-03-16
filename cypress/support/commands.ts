@@ -9,7 +9,4 @@ Cypress.Commands.addAll(profileCommands)
 Cypress.Commands.addAll(articleCommands)
 Cypress.Commands.addAll(commentsCommands)
 Cypress.Commands.addAll(ratingCommands)
-Cypress.Commands.overwrite('intercept', () => {
-
-})
 

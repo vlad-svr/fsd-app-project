@@ -72,6 +72,15 @@
         "MANAGER"
       ],
       "avatar": "https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg"
+    },
+    {
+      "id": "4",
+      "username": "test",
+      "password": "123",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg"
     }
   ],
   "articles": [

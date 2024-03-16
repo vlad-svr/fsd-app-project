@@ -2,3 +2,5 @@
 *.config.js
 !/config/storybook
 json-server
+cypress
+cypress.config.ts

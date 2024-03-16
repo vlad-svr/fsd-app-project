@@ -18,7 +18,9 @@
         "allowSyntheticDefaultImports": true
     },
     "exclude": [
-        "build"
+        "build",
+        "cypress",
+        "./cypress.config.ts"
     ],
     "ts-node": {
         "compilerOptions": {

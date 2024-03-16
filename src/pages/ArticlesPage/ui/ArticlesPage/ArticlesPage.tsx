@@ -41,6 +41,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
           <Page
               onScrollEnd={handleScrollEnd}
               className={classNames(cls.wrapper, {}, [className])}
+              data-testid="ArticlesPage"
           >
               <ArticlesPageFilters/>
               <ArticleInfiniteList/>

@@ -9,7 +9,7 @@ import { Sidebar } from '@/widgets/Sidebar'
 function App () {
   const dispatch = useDispatch()
   const isInitialized = useSelector(getUserIsInit)
-
+  console.log(isInitialized)
   useEffect(() => {
     dispatch(userActions.initAuthData())
   }, [dispatch])

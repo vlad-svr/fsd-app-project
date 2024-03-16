@@ -953,6 +953,19 @@
           ]
         }
       ]
+    },
+    {
+      "title": "TESTING ARTICLE",
+      "subtitle": "Biology",
+      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "views": 1022,
+      "createdAt": "16.03.2024",
+      "userId": "1",
+      "type": [
+        "SCIENCE"
+      ],
+      "blocks": [],
+      "id": "73JnucQ"
     }
   ],
   "comments": [
@@ -1063,6 +1076,17 @@
       "id": "1",
       "first": "Vladislav",
       "lastname": "Pupkin",
+      "age": 29,
+      "currency": "USD",
+      "country": "Belarus",
+      "city": "Minks",
+      "username": "admin",
+      "avatar": "https://sun9-42.userapi.com/s/v1/if1/IfjACAM7kcoNjo4zBdDpOYpc-gR-AAPafa7xuG3Lpg-PVEZU8TgdfEEKtG5e1pRg1Bmp_mgn.jpg?size=200x200&quality=96&crop=412,564,1001,1001&ava=1"
+    },
+    {
+      "id": "4",
+      "first": "Test",
+      "lastname": "User",
       "age": 29,
       "currency": "USD",
       "country": "Belarus",

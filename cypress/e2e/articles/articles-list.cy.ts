@@ -9,4 +9,10 @@ describe('User gets to the articles list page', () => {
     cy.getByTestId('ArticlesList').should('exist')
     cy.getByTestId('ArticlesListItem').should('have.length.greaterThan', 3)
   })
+
+  it('Rendered with stubs', () => {
+    cy.intercept('GET', '**/articles?*', {fixture: 'articles.json'})
+    cy.getByTestId('ArticlesList').should('exist')
+    cy.getByTestId('ArticlesListItem').should('have.length.greaterThan', 3)
+  })
 })

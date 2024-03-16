@@ -4,8 +4,14 @@
     "lib": ["es5", "dom"],
     "types": ["cypress", "node"],
     "allowJs": true,
-    "isolatedModules": false
+    "isolatedModules": false,
+    "jsx": "react-jsx"
   },
-  "include": ["../node_modules/cypress", "../cypress.config.ts", "./**/*.ts"],
+  "include": [
+    "../node_modules/cypress",
+    "../cypress.config.ts",
+    "./**/*.ts",
+    "./**/*.tsx"
+  ],
 }
 

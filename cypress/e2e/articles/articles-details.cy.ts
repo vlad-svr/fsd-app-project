@@ -31,6 +31,7 @@ describe('User gets to the article details page', () => {
   })
 
   it('Rate the article 4', () => {
+    cy.intercept('GET', '**/articles/*', {fixture: 'article-details.json'})
     cy.getByTestId('ArticleDetails.Info').should('exist')
     cy.getByTestId('RatingCard').should('exist')
     cy.getByTestId('RatingCard').scrollIntoView()

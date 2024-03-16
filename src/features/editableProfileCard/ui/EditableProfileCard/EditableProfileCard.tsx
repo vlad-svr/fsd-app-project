@@ -20,7 +20,7 @@ import { ValidateProfileError } from '../../model/consts/consts'
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 
 interface EditableProfileCardProps {
-  id?: string
+  id?: string | number
   className?: string
 }
 

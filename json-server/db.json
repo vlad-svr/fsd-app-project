@@ -51,7 +51,10 @@
       "username": "admin",
       "password": "123",
       "roles": ["ADMIN"],
-      "avatar": "https://sun9-42.userapi.com/s/v1/if1/IfjACAM7kcoNjo4zBdDpOYpc-gR-AAPafa7xuG3Lpg-PVEZU8TgdfEEKtG5e1pRg1Bmp_mgn.jpg?size=200x200&quality=96&crop=412,564,1001,1001&ava=1"
+      "avatar": "https://sun9-42.userapi.com/s/v1/if1/IfjACAM7kcoNjo4zBdDpOYpc-gR-AAPafa7xuG3Lpg-PVEZU8TgdfEEKtG5e1pRg1Bmp_mgn.jpg?size=200x200&quality=96&crop=412,564,1001,1001&ava=1",
+      "features": {
+        "isCounterEnabled": true
+      }
     },
     {
       "id": "2",

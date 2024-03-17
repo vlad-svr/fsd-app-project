@@ -1,41 +1,40 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
-      'plugin:react/recommended',
-      'standard-with-typescript',
-      'plugin:i18next/recommended',
-      'plugin:jest-dom/recommended',
-      'plugin:storybook/recommended',
-      'plugin:react-hooks/recommended'
+    'plugin:react/recommended',
+    'standard-with-typescript',
+    'plugin:i18next/recommended',
+    'plugin:jest-dom/recommended',
+    'plugin:storybook/recommended',
+    'plugin:react-hooks/recommended',
+    'prettier',
   ],
   overrides: [
     {
       files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
-          'i18next/no-literal-string': 'off',
-          'max-len': 'off'
-      }
-    }
+        'i18next/no-literal-string': 'off',
+        'max-len': 'off',
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
   plugins: [
-      'react',
-      'i18next',
-      'jest-dom',
-      'react-hooks',
-      'eslint-plugin-storybook',
-      'vlad-custom-plugin',
-      "unused-imports"
+    'react',
+    'i18next',
+    'jest-dom',
+    'react-hooks',
+    'eslint-plugin-storybook',
+    'vlad-custom-plugin',
+    'unused-imports',
   ],
   rules: {
-    'react/jsx-indent': [2, 4],
-    'react/jsx-indent-props': [2, 4],
     'react/react-in-jsx-scope': 'off',
     'react/display-name': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -49,29 +48,38 @@ module.exports = {
     'n/no-callback-literal': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/promise-function-async': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false, argsIgnorePattern: '^_' }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "vlad-custom-plugin/path-checker": ["error", {alias: '@'}],
-    "unused-imports/no-unused-imports": "error",
-    "vlad-custom-plugin/layer-imports": [
-        "error",
-        {
-            alias: '@',
-            ignoreImportPatterns: ['**/StoreProvider', '**/testing']
-        }
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: false,
+        argsIgnorePattern: '^_',
+      },
     ],
-    "vlad-custom-plugin/public-api-import": [
-        "error",
-        {
-            alias: '@',
-            testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx']
-        }
-    ]
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
+    'vlad-custom-plugin/path-checker': ['error', { alias: '@' }],
+    'unused-imports/no-unused-imports': 'error',
+    'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
+    'vlad-custom-plugin/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
+    'vlad-custom-plugin/public-api-import': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+      },
+    ],
   },
-  "settings": {
-    "react": {
-      "version": "detect",
+  settings: {
+    react: {
+      version: 'detect',
     },
-  }
-}
+  },
+};

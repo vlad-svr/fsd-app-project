@@ -50,7 +50,9 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://sun9-42.userapi.com/s/v1/if1/IfjACAM7kcoNjo4zBdDpOYpc-gR-AAPafa7xuG3Lpg-PVEZU8TgdfEEKtG5e1pRg1Bmp_mgn.jpg?size=200x200&quality=96&crop=412,564,1001,1001&ava=1",
       "features": {
         "isCounterEnabled": true
@@ -65,7 +67,9 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg",
       "jsonSettings": {
         "theme": "app_orange_theme"
@@ -75,7 +79,9 @@
       "id": "3",
       "username": "manager",
       "password": "123",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg",
       "jsonSettings": {
         "theme": "app_light_theme",
@@ -87,7 +93,9 @@
       "id": "4",
       "username": "test",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://sm.ign.com/t/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.300.jpg",
       "jsonSettings": {
         "theme": "app_orange_theme",
@@ -105,7 +113,9 @@
       "views": 324,
       "userId": "1",
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -175,7 +185,9 @@
       "views": 32423,
       "createdAt": "26.02.2022",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -245,7 +257,9 @@
       "views": 54,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -315,7 +329,9 @@
       "views": 3,
       "userId": "1",
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -337,7 +353,9 @@
       "views": 5,
       "createdAt": "26.02.2022",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -359,7 +377,9 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -381,7 +401,9 @@
       "views": 4434,
       "userId": "1",
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -403,7 +425,9 @@
       "views": 6556,
       "createdAt": "26.02.2022",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -425,7 +449,9 @@
       "views": 7676,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -447,7 +473,9 @@
       "views": 43,
       "userId": "1",
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "11",
@@ -469,7 +497,9 @@
       "views": 657,
       "createdAt": "26.02.2022",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "13",
@@ -491,7 +521,9 @@
       "views": 777,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "15",
@@ -513,7 +545,9 @@
       "views": 676,
       "userId": "1",
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -535,7 +569,9 @@
       "views": 908,
       "createdAt": "26.02.2022",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -557,7 +593,9 @@
       "views": 8,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -579,7 +617,9 @@
       "views": 1022,
       "userId": "1",
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -601,7 +641,9 @@
       "views": 4,
       "createdAt": "26.08.2022",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -623,7 +665,9 @@
       "views": 1022,
       "createdAt": "26.05.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -645,7 +689,9 @@
       "views": 1022,
       "userId": "1",
       "createdAt": "26.02.2001",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -667,7 +713,9 @@
       "views": 1022,
       "createdAt": "26.02.2002",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -689,7 +737,9 @@
       "views": 65,
       "createdAt": "26.02.2024",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -711,7 +761,9 @@
       "views": 1022,
       "userId": "1",
       "createdAt": "26.02.2011",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -733,7 +785,9 @@
       "views": 454,
       "createdAt": "26.02.2012",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -755,7 +809,11 @@
       "views": 1022,
       "createdAt": "26.02.2014",
       "userId": "1",
-      "type": ["IT", "SCIENCE", "ECONOMICS"],
+      "type": [
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -777,7 +835,9 @@
       "views": 65465,
       "userId": "1",
       "createdAt": "26.02.2015",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -799,7 +859,11 @@
       "views": 1022,
       "createdAt": "26.02.2025",
       "userId": "2",
-      "type": ["IT", "SCIENCE", "ECONOMICS"],
+      "type": [
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -821,7 +885,9 @@
       "views": 545454,
       "createdAt": "26.02.2000",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -843,7 +909,9 @@
       "views": 65766,
       "userId": "1",
       "createdAt": "26.02.2023",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -865,7 +933,11 @@
       "views": 4343,
       "createdAt": "26.02.2020",
       "userId": "2",
-      "type": ["IT", "SCIENCE", "ECONOMICS"],
+      "type": [
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -887,7 +959,9 @@
       "views": 76754,
       "createdAt": "26.02.2019",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -908,7 +982,9 @@
       "views": 1022,
       "createdAt": "16.03.2024",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [],
       "id": "73JnucQ"
     },
@@ -919,7 +995,9 @@
       "views": 1022,
       "createdAt": "16.03.2024",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [],
       "id": "CA1Mb1j"
     }

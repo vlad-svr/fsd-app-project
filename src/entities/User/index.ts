@@ -3,6 +3,7 @@ export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthDa
 export { getUserIsInit } from './model/selectors/getUserIsInit/getUserIsInit';
 export { useJsonSettings } from './model/selectors/jsonSettings';
 export { saveJsonSettings } from './model/services/saveJsonSettings';
+export { initAuthData } from './model/services/initAuthData';
 export {
   isUserAdmin,
   isUserManager,

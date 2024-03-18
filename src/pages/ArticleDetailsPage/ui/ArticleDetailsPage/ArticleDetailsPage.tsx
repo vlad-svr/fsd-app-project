@@ -14,7 +14,7 @@ import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
 import { ArticleDetailsComments } from '../../ui/ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
-import { toggleFeatures } from '@/shared/lib/features';
+import { ToggleFeatures } from '@/shared/lib/features';
 import { Counter, RedesignedCounter } from '@/entities/Counter';
 
 interface ArticleDetailsPageProps {
@@ -33,12 +33,6 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     return null;
   }
 
-  const counter = toggleFeatures({
-    name: 'isCounterEnabled',
-    on: () => <RedesignedCounter />,
-    off: () => <Counter />,
-  });
-
   return (
     <DynamicModuleLoader reducers={reducers}>
       <Page className={classNames(cls.wrapper, {}, [className])}>
@@ -47,7 +41,11 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           <ArticleDetails id={id} />
           <ArticleRating articleId={id} />
           <ArticleRecommendationsList />
-          {counter}
+          <ToggleFeatures
+            feature="isCounterEnabled"
+            on={<RedesignedCounter />}
+            off={<Counter />}
+          />
           <ArticleDetailsComments id={id} />
         </VStack>
       </Page>

@@ -1,6 +1,6 @@
 import { type ButtonHTMLAttributes, forwardRef } from 'react';
 import cls from './Button.module.scss';
-import classNames, { type Mods } from '@/shared/lib/classNames/classNames';
+import { type Mods } from '@/shared/lib/classNames/classNames';
 
 enum ButtonTheme {
   PURE = 'pure',
@@ -46,14 +46,15 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   };
 
   return (
-    <button
-      ref={ref}
-      disabled={disabled}
-      className={classNames(cls.wrapper, mods, [className])}
-      {...restProps}
-    >
-      {children}
-    </button>
+    <div></div>
+    // <button
+    //   ref={ref}
+    //   disabled={disabled}
+    //   className={classNames(cls.wrapper, mods, [className])}
+    //   {...restProps}
+    // >
+    //   {children}
+    // </button>
   );
 });
 

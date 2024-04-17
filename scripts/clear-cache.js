@@ -1,16 +1,14 @@
-const fs = require('node:fs')
-const path = require('path')
+const fs = require('node:fs');
+const path = require('path');
 
-const CACHE_FOLDER_PATH = path.resolve(__dirname, '..', 'node_modules', '.cache')
-
-// const hasFolder = fs.accessSync(CACHE_FOLDER_PATH)
+const CACHE_FOLDER_PATH = path.resolve(__dirname, '..', 'node_modules', '.cache');
 
 fs.rm(CACHE_FOLDER_PATH, { recursive: true }, err => {
   if (err) {
     if (err.code === 'ENOENT') {
-      return
+      return;
     }
-    throw err
+    throw err;
   }
-  console.log('Cache is deleted!')
-})
+  console.log('Cache is deleted!');
+});
